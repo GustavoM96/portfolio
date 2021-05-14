@@ -24,6 +24,7 @@ export const Menu = styled.header`
     align-items: center;
 
     li {
+      margin: 10px 0;
       cursor: pointer;
       height: 100%;
       &:hover {

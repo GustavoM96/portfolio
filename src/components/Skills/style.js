@@ -6,7 +6,8 @@ export const ContainerAbout = styled.section`
   border-bottom: 2px solid var(--secundary-text);
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding: 50px 35px;
+  justify-content: space-between;
   h1 {
     text-align: center;
   }
@@ -18,6 +19,7 @@ export const ContainerImages = styled.div`
 
   align-items: center;
   justify-content: center;
+
   img {
     width: 80%;
     max-width: 250px;
@@ -25,7 +27,7 @@ export const ContainerImages = styled.div`
   }
   div {
     text-align: center;
-    width: 30%;
+    /* width: 30%; */
     min-width: 150px;
   }
   @media (min-width: 400px) {

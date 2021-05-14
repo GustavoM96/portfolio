@@ -6,7 +6,8 @@ export const ContainerAbout = styled.section`
   border-bottom: 2px solid var(--secundary-text);
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding: 50px 35px;
+  justify-content: space-between;
 
   h1 {
     text-align: center;
@@ -18,7 +19,7 @@ export const ContainerImages = styled.div`
   flex-direction: column;
   margin: 0 auto;
 
-  justify-content: center;
+  justify-content: space-between;
 
   align-items: center;
   img {

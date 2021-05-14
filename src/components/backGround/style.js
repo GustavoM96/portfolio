@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BackGroundStyled = styled.div`
-  background: radial-gradient(circle at 84px 115px, #1b2735 -25%, #000 70%);
+  background: radial-gradient(circle at 84px 115px, #1b2735 -25%, #000 50%);
   position: fixed;
   /* top: 0; */
   z-index: -2;
@@ -15,7 +15,9 @@ export const Star = styled.div`
   height: 1px;
   width: 1px;
   border-radius: 50%;
-  box-shadow: 779px 1331px #fff, 324px 42px #fff, 84px 115px 5px 4px yellow,
+  transition: width 1.5s;
+  transition: height 1.5s;
+  box-shadow: 779px 1331px #fff, 324px 42px #fff, 23px 83px 5px 4px yellow,
     1312px 276px #fff, 451px 625px #fff, 521px 1931px #fff, 1087px 1871px #fff,
     36px 1546px #fff, 132px 934px #fff, 1698px 901px #fff, 1418px 664px #fff,
     1448px 1157px #fff, 1084px 232px #fff, 347px 1776px #fff, 1722px 243px #fff,

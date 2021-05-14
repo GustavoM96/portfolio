@@ -5,6 +5,12 @@
 }
 html {
   background: linear-gradient(90deg, #141d27 -35%, #000 80%);
+  scrollbar-width: thin;
+  scrollbar-color: #1b2735 white;
+}
+h1 {
+  margin: 0;
+  font-size: 32px;
 }
 p {
   color: var(--secundary-text);
@@ -22,12 +28,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.container {
-  min-height: 300px;
-  max-height: 300px;
-  overflow-y: auto;
 }
 
 .container::-webkit-scrollbar,

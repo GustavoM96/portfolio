@@ -6,7 +6,8 @@ export const ContainerAbout = styled.header`
   border-bottom: 2px solid var(--secundary-text);
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding: 50px 35px;
+  justify-content: space-between;
   h1 {
     text-align: center;
   }
@@ -15,14 +16,16 @@ export const ContainerAbout = styled.header`
 export const ContainerInfo = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   img {
     max-width: 350px;
     width: 100%;
+    height: 100%;
+
     margin: 5px;
 
-    border-radius: 15px;
+    border-radius: 50%;
   }
   #containerText {
     max-width: 350px;

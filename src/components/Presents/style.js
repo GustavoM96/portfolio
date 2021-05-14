@@ -6,13 +6,13 @@ export const ContainerAbout = styled.section`
   border-bottom: 2px solid var(--secundary-text);
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 25px;
+  padding: 100px 35px;
   display: flex;
-  justify-content: space-around;
-  padding-top: 25px;
+  justify-content: space-between;
   #containerButtons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+
     margin: 10px;
   }
   button {

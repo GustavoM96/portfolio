@@ -1,10 +1,13 @@
 import { ContainerAbout, ContainerImages } from "./style";
 import Ijs from "../../image/js.svg";
+import Its from "../../image/ts.svg";
+
 import Icss from "../../image/css.svg";
 import Ihtml from "../../image/html.svg";
 import Ireact from "../../image/react.svg";
 import Iredux from "../../image/redux.svg";
 import Igit from "../../image/git.svg";
+import Ipy from "../../image/py.svg";
 
 export default function Skills() {
   return (
@@ -23,21 +26,21 @@ export default function Skills() {
 
         <div>
           <img src={Ijs} alt="js" />
-          <figcaption>Javacript</figcaption>
+          <figcaption>JavaScript</figcaption>
         </div>
 
         <div>
-          <img src={Ireact} alt="html" />
+          <img src={Ireact} alt="React" />
           <figcaption>React</figcaption>
         </div>
 
         <div>
-          <img src={Iredux} alt="css" />
+          <img src={Iredux} alt="Redux" />
           <figcaption>Redux</figcaption>
         </div>
 
         <div>
-          <img src={Igit} alt="js" />
+          <img src={Igit} alt="Git" />
           <figcaption>Git</figcaption>
         </div>
       </ContainerImages>
