@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerAbout = styled.header`
-  background-color: var(--main-color);
+  /* background-color: var(--main-color); */
   color: var(--main-text);
   border-bottom: 2px solid var(--secundary-text);
   width: 90%;

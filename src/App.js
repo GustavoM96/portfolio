@@ -6,20 +6,27 @@ import Presents from "./components/Presents";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
+import { BackGround } from "./components/backGround";
 import ContainerMax from "./components/containerMax";
+import { Star } from "./components/backGround/style";
+import ContainerMain from "./components/containerMain";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <BackGround />
       <ContainerMax>
         <ButtonAppBar />
-        <Presents />
-        <About />
-        <Skills />
-        <Projects />
-        <Footer />
+        <ContainerMain>
+          <Star />
+          <Presents />
+          <About />
+          <Skills />
+          <Projects />
+          <Footer />
+        </ContainerMain>
       </ContainerMax>
-    </div>
+    </>
   );
 }
 

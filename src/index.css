@@ -4,7 +4,7 @@
   --secundary-text: #c2e7d9;
 }
 html {
-  background-color: var(--main-color);
+  background: linear-gradient(90deg, #141d27 -35%, #000 80%);
 }
 p {
   color: var(--secundary-text);
@@ -22,4 +22,32 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  min-height: 300px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.container::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 12px;
+  height: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1b2735;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.container::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #1b2735;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }

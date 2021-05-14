@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import iconPc from "../../image/iconPc.svg";
 
 import { ContainerAbout } from "./style";
@@ -10,6 +11,7 @@ export default function Presents() {
   function GitLab() {
     window.open("https://gitlab.com/gustavo.hmessias96/");
   }
+
   return (
     <ContainerAbout id="Presents">
       <div id="containerText">
