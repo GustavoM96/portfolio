@@ -40,28 +40,3 @@ export const CarouselStyled = styled(Carousel)`
     }
   }
 `;
-
-export const ContainerImages = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-
-  justify-content: space-between;
-
-  align-items: center;
-  img {
-    width: 100%;
-    margin: 5px 0;
-  }
-  div {
-    text-align: center;
-  }
-  @media (min-width: 880px) {
-    div {
-      width: 45%;
-      margin: 5px;
-    }
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-`;

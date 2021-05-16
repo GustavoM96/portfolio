@@ -16,11 +16,7 @@ export default function Projects() {
   return (
     <ContainerAbout id="Projects">
       <h1>Projetos</h1>
-      <CarouselStyled
-        itemPosition={"CENTER"}
-        itemPadding={[10, 50]}
-        transitionMs={1500}
-      >
+      <CarouselStyled itemPadding={[0, 50]} transitionMs={1500}>
         {projects.map((project) => (
           <figure key={project.id}>
             <img src={project.image} alt={project.title} />

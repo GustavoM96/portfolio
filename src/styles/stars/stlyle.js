@@ -6,7 +6,7 @@ export const Star3 = styled.div`
       transform: translateY(0px);
     }
     100% {
-      transform: translateY(-2000px);
+      transform: translateY(-1000px);
     }
   }
 

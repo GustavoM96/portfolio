@@ -1,11 +1,12 @@
 :root {
   --main-color: #0d0221;
+  --secundary-color: #1b2735;
   --main-text: #fff;
   --secundary-text: #c2e7d9;
 }
 html {
   scrollbar-width: large;
-  scrollbar-color: #1b2735 white;
+  scrollbar-color: var(--secundary-color) white;
 }
 h1 {
   font-size: 2.5rem;
@@ -20,8 +21,12 @@ p {
 
 h1,
 h2,
-figure {
+figure,
+input,
+textarea,
+form {
   margin: 0;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
@@ -47,13 +52,13 @@ code {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1b2735;
+  background: var(--secundary-color);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .container::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: #1b2735;
+  background: var(--secundary-color);
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }

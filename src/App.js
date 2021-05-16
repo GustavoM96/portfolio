@@ -9,7 +9,7 @@ import { BackGround } from "./components/backGround";
 import ContainerMax from "./components/containerMax";
 import { Star, Star3, Star2 } from "./styles/stars/stlyle";
 import ContainerMain from "./components/containerMain";
-
+import Contact from "./components/Contact";
 function App() {
   return (
     <>
@@ -26,6 +26,7 @@ function App() {
           <About />
           <Skills />
           <Projects />
+          <Contact />
           <Footer />
         </ContainerMain>
       </ContainerMax>

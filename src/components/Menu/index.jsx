@@ -26,6 +26,7 @@ export default function ButtonAppBar() {
               activeClass="active"
               to="Presents"
               spy={true}
+              offset={-30}
               smooth={true}
               duration={1500}
             >
@@ -39,6 +40,7 @@ export default function ButtonAppBar() {
               activeClass="active"
               to="About"
               spy={true}
+              offset={-30}
               smooth={true}
               duration={1500}
             >
@@ -52,6 +54,7 @@ export default function ButtonAppBar() {
               activeClass="active"
               to="Skills"
               spy={true}
+              offset={-30}
               smooth={true}
               duration={1500}
             >
@@ -65,6 +68,7 @@ export default function ButtonAppBar() {
               activeClass="active"
               to="Projects"
               spy={true}
+              offset={-30}
               smooth={true}
               duration={1500}
             >
@@ -76,8 +80,9 @@ export default function ButtonAppBar() {
             <Link
               className="link"
               activeClass="active"
-              to="Projects"
+              to="Contact"
               spy={true}
+              offset={-30}
               smooth={true}
               duration={1500}
             >
