@@ -1,18 +1,18 @@
 import { ContainerAbout, ContainerImages } from "./style";
 import Ijs from "../../image/js.svg";
-import Its from "../../image/ts.svg";
-
 import Icss from "../../image/css.svg";
 import Ihtml from "../../image/html.svg";
 import Ireact from "../../image/react.svg";
 import Iredux from "../../image/redux.svg";
 import Igit from "../../image/git.svg";
-import Ipy from "../../image/py.svg";
+import Carousel from "react-elastic-carousel";
+import { useState } from "react";
 
 export default function Skills() {
   return (
     <ContainerAbout id="Skills">
       <h1>Habilidades</h1>
+
       <ContainerImages>
         <div>
           <img src={Ihtml} alt="html" />

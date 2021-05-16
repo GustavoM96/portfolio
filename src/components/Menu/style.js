@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Menu = styled.header`
-  background-color: rgba(0, 0, 0);
+  /* background-color: rgba(0, 0, 0); */
   position: fixed;
   right: 0;
   color: var(--main-text);

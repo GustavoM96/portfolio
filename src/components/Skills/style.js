@@ -16,22 +16,25 @@ export const ContainerAbout = styled.section`
 export const ContainerImages = styled.div`
   display: flex;
   flex-direction: column;
-
+  margin: 25px 0 0;
   align-items: center;
   justify-content: center;
 
   img {
-    width: 80%;
+    width: 70%;
     max-width: 250px;
     margin: 5px 5px 5px;
+    transition: transform 1.5s;
+    :hover {
+      transform: translateY(-25px);
+    }
   }
   div {
     text-align: center;
-    /* width: 30%; */
-    min-width: 150px;
   }
   @media (min-width: 400px) {
     flex-direction: row;
+    height: 400px;
     flex-wrap: wrap;
   }
 `;

@@ -1,31 +1,33 @@
-import { ContainerAbout, ContainerImages } from "./style";
-import lig4 from "../../image/lig4.png";
-import login from "../../image/login.png";
-import rickPok from "../../image/rickPok.png";
-import starWars from "../../image/starWars.png";
+import { ContainerAbout, CarouselStyled } from "./style";
+import Lig4 from "../../image/lig4.png";
+import Login from "../../image/login.png";
+import RickPok from "../../image/rickPok.png";
+import StarWars from "../../image/starWars.png";
+import Carousel from "react-elastic-carousel";
+import { useState } from "react";
 
 export default function Projects() {
+  const projectList = [
+    { id: 1, title: "Lig4", image: Lig4 },
+    { id: 2, title: "StarWars", image: StarWars },
+    { id: 3, title: "Api do Rick e Pokemon", image: RickPok },
+  ];
+  const [projects, setProjects] = useState(projectList);
   return (
     <ContainerAbout id="Projects">
       <h1>Projetos</h1>
-      <ContainerImages>
-        <div>
-          <figcaption>Lig4</figcaption>
-          <img src={lig4} alt="lig4" />
-        </div>
-        <div>
-          <figcaption>starWars</figcaption>
-          <img src={starWars} alt="starWars" />
-        </div>
-        <div>
-          <figcaption>Kenzie Hub</figcaption>
-          <img src={login} alt="login" />
-        </div>
-        <div>
-          <figcaption>Api do Rick e Pokemon</figcaption>
-          <img src={rickPok} alt="rickPok" />
-        </div>
-      </ContainerImages>
+      <CarouselStyled
+        itemPosition={"CENTER"}
+        itemPadding={[10, 50]}
+        transitionMs={1500}
+      >
+        {projects.map((project) => (
+          <figure key={project.id}>
+            <img src={project.image} alt={project.title} />
+            <figcaption>{project.title}</figcaption>
+          </figure>
+        ))}
+      </CarouselStyled>
     </ContainerAbout>
   );
 }

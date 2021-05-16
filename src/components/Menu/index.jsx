@@ -10,6 +10,7 @@ import ComputerIcon from "@material-ui/icons/Computer";
 import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
 import ListIcon from "@material-ui/icons/List";
+import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 
 export default function ButtonAppBar() {
   const [moveSubject, setmoveSubject] = useState(1);
@@ -69,6 +70,19 @@ export default function ButtonAppBar() {
             >
               <ListIcon />
               Projetos
+            </Link>
+          </li>
+          <li>
+            <Link
+              className="link"
+              activeClass="active"
+              to="Projects"
+              spy={true}
+              smooth={true}
+              duration={1500}
+            >
+              <AlternateEmailIcon />
+              Contatos
             </Link>
           </li>
         </ul>

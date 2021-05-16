@@ -1,5 +1,9 @@
-import { Container } from "./style";
+import { Container, ContainerCenter } from "./style";
 
 export default function ContainerMain({ children }) {
-  return <Container>{children}</Container>;
+  return (
+    <ContainerCenter>
+      <Container>{children}</Container>;
+    </ContainerCenter>
+  );
 }

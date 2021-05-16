@@ -8,7 +8,9 @@ export default function About() {
     <ContainerAbout id="About">
       <h1>Sobre</h1>
       <ContainerInfo>
-        <img src={Avatar} alt="Gustavo" />
+        <figure>
+          <img src={Avatar} alt="Gustavo" />
+        </figure>
         <div id="containerText">
           <h2>Dev em constante desenvolvimento...</h2>
           <p>

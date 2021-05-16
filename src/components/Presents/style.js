@@ -12,10 +12,10 @@ export const ContainerAbout = styled.section`
   #containerButtons {
     display: flex;
     justify-content: space-between;
-
-    margin: 10px;
+    flex-wrap: wrap;
   }
   button {
+    margin: 0 5px 15px;
     padding: 5px;
     width: 45%;
     border-radius: 10px;
@@ -25,10 +25,25 @@ export const ContainerAbout = styled.section`
       box-shadow: 0 0 5px white;
     }
   }
-  img {
-    max-width: 500px;
-    width: 45%;
-    display: none;
+  figure {
+    width: 200px;
+
+    position: relative;
+
+    img {
+      @keyframes rotate {
+        0% {
+          transform: translateY(0%) rotate(0deg);
+        }
+        100% {
+          transform: translateY(30%) rotate(45deg);
+        }
+      }
+      position: absolute;
+      left: 0;
+      animation: rotate ease-in-out 10s infinite alternate;
+      width: 100%;
+    }
   }
   #containerText {
     max-width: 350px;

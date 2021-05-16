@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import iconPc from "../../image/iconPc.svg";
+import iconPc from "../../image/astro2.png";
 
 import { ContainerAbout } from "./style";
 
@@ -10,6 +10,9 @@ export default function Presents() {
   }
   function GitLab() {
     window.open("https://gitlab.com/gustavo.hmessias96/");
+  }
+  function GitHub() {
+    window.open("https://github.com/GustavoM96/");
   }
 
   return (
@@ -21,15 +24,20 @@ export default function Presents() {
           e minha trajetória{" "}
         </p>
         <div id="containerButtons">
-          <button onClick={linkdIn} id="linkdIn">
-            LinkdIn
-          </button>
           <button onClick={GitLab} id="Git-Hub">
             Git-Lab
           </button>
+          <button onClick={GitHub} id="Git-Hub">
+            Git-Hub
+          </button>
+          <button onClick={linkdIn} id="linkdIn">
+            LinkdIn
+          </button>
         </div>
       </div>
-      <img src={iconPc} alt="iconPc" />
+      <figure>
+        <img src={iconPc} alt="iconPc" />
+      </figure>
     </ContainerAbout>
   );
 }

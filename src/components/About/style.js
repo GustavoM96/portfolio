@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-export const ContainerAbout = styled.header`
+export const ContainerAbout = styled.section`
   /* background-color: var(--main-color); */
   color: var(--main-text);
   border-bottom: 2px solid var(--secundary-text);
   width: 90%;
   margin: 0 auto;
   padding: 50px 35px;
-  justify-content: space-between;
   h1 {
     text-align: center;
   }
@@ -15,17 +14,15 @@ export const ContainerAbout = styled.header`
 
 export const ContainerInfo = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  img {
+  margin-top: 25px;
+  figure {
     max-width: 350px;
-    width: 100%;
-    height: 100%;
-
-    margin: 5px;
-
-    border-radius: 50%;
+    width: 40%;
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
   }
   #containerText {
     max-width: 350px;
