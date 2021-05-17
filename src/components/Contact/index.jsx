@@ -51,7 +51,6 @@ export default function Contact() {
 
   return (
     <ContainerAbout id="Contact">
-      <h1>Contato</h1>
       <ContainerContact>
         <form onSubmit={handleSubmit(handleForm)}>
           <div>
@@ -82,16 +81,10 @@ export default function Contact() {
           <button type="submit">Enviar</button>
         </form>
         <ContainerText>
-          <h2>Dev em constante desenvolvimento...</h2>
+          <h2>Será este o fim?</h2>
           <p>
-            Gustavo Henrique Messias 25 anos formado em engenharia
-            Elétrica-Eletônica e apaixonado pelas áreas de exatas e
-            principalmente por programação{" "}
-          </p>
-          <p>
-            Comecei a entrar a fundo na programação em outubro de 2020 ao ser
-            aprovado para ser aluno da Kenzie Academy Brasil, onde pude
-            desenvolver diversas hábilidades e tecnologias aplicados a projetos
+            Claro que não tripulante, agora você poderá entrar em contato comigo
+            pelo campo ao lado.
           </p>
         </ContainerText>
       </ContainerContact>

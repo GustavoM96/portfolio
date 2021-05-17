@@ -11,7 +11,7 @@ import { useState } from "react";
 export default function Skills() {
   return (
     <ContainerAbout id="Skills">
-      <h1>Habilidades</h1>
+      <h1>Tecnologias Exploradas</h1>
 
       <ContainerImages>
         <div>

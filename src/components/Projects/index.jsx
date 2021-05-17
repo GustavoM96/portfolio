@@ -15,7 +15,7 @@ export default function Projects() {
   const [projects, setProjects] = useState(projectList);
   return (
     <ContainerAbout id="Projects">
-      <h1>Projetos</h1>
+      <h1>Portfólio</h1>
       <CarouselStyled itemPadding={[0, 50]} transitionMs={1500}>
         {projects.map((project) => (
           <figure key={project.id}>

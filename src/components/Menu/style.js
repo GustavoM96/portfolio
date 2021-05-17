@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Menu = styled.header`
-  /* background-color: rgba(0, 0, 0); */
   position: fixed;
-  /* right: 0; */
+  right: 0;
   color: var(--main-text);
   border-bottom: 2px solid var(--secundary-text);
   width: 120px;

@@ -18,10 +18,11 @@ export default function Presents() {
   return (
     <ContainerAbout id="Presents">
       <div id="containerText">
-        <h1>Bem Vindo a minha Página</h1>
+        <h1>Bem-Vindo Visitante</h1>
         <p>
-          Olá me chamo Gustavo e sou Dev Front-End. Aqui terá um pouco sobre mim
-          e minha trajetória{" "}
+          Olá tudo bem? Eu me chamo Gustavo e sou Desenvolvedor{" "}
+          <strong>Front-End</strong>. Criei essa página para que você possa me
+          conhecher um pouco melhor.
         </p>
         <div id="containerButtons">
           <button onClick={GitLab} id="Git-Hub">
