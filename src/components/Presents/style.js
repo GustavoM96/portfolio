@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 export const ContainerAbout = styled.section`
-  /* background-color: var(--main-color); */
   color: var(--main-text);
   border-bottom: 2px solid var(--secundary-text);
   width: 90%;
-  margin: 0 auto;
   padding: 100px 35px;
   display: flex;
   justify-content: space-between;

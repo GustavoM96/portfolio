@@ -14,8 +14,8 @@ export const Star3 = styled.div`
   position: absolute;
   z-index: -1;
   background: transparent;
-  width: 3px;
-  height: 3px;
+  width: 1px;
+  height: 1px;
   background: transparent;
   animation: animStar 150s infinite linear;
   box-shadow: 387px 1878px #fff, 760px 1564px #fff, 1487px 999px #fff,
@@ -49,8 +49,8 @@ export const Star3 = styled.div`
     position: absolute;
     z-index: -1;
     top: 2000px;
-    width: 3px;
-    height: 3px;
+    width: 1px;
+    height: 1px;
     background: transparent;
     box-shadow: 387px 1878px #fff, 760px 1564px #fff, 1487px 999px #fff,
       948px 1828px #fff, 1977px 1001px #fff, 1284px 1963px #fff,
@@ -86,8 +86,8 @@ export const Star2 = styled.div`
   background: transparent;
   position: absolute;
   z-index: -1;
-  width: 2px;
-  height: 2px;
+  width: 1px;
+  height: 1px;
   background: transparent;
   animation: animStar 100s linear infinite;
   box-shadow: 1448px 320px #fff, 1775px 1663px #fff, 332px 1364px #fff,
@@ -146,8 +146,8 @@ export const Star2 = styled.div`
     content: "";
     position: absolute;
     top: 2000px;
-    width: 2px;
-    height: 2px;
+    width: 1px;
+    height: 1px;
     background: transparent;
     box-shadow: 1448px 320px #fff, 1775px 1663px #fff, 332px 1364px #fff,
       878px 340px #fff, 569px 1832px #fff, 1422px 1684px #fff,

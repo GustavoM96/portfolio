@@ -5,9 +5,10 @@ import Presents from "./components/Presents";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
-import { BackGround } from "./components/backGround";
 import ContainerMax from "./components/containerMax";
-import { Star, Star3, Star2 } from "./styles/stars/stlyle";
+import { Star, Star3, Star2 } from "./styles/stars";
+import { BackGround } from "./styles/backGround";
+
 import ContainerMain from "./components/containerMain";
 import Contact from "./components/Contact";
 function App() {

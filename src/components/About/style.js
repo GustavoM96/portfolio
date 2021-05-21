@@ -5,7 +5,6 @@ export const ContainerAbout = styled.section`
   color: var(--main-text);
   border-bottom: 2px solid var(--secundary-text);
   width: 90%;
-  margin: 0 auto;
   padding: 50px 35px;
   h1 {
     text-align: center;

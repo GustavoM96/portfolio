@@ -13,6 +13,15 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 
 export default function Contact() {
+  function linkdIn() {
+    window.open("https://www.linkedin.com/in/gustavo-messias/");
+  }
+  function GitLab() {
+    window.open("https://gitlab.com/gustavo.hmessias96/");
+  }
+  function GitHub() {
+    window.open("https://github.com/GustavoM96/");
+  }
   const schema = yup.object().shape({
     name: yup.string().required("Campo Obrigatório"),
     email: yup.string().email("email inválido").required("Campo Obrigatório"),
@@ -42,9 +51,9 @@ export default function Contact() {
       },
     };
 
-    // axios
-    //   .post("https://api.emailjs.com/api/v1.0/email/send", dataFormed)
-    //   .then((resp) => console.log(resp));
+    axios
+      .post("https://api.emailjs.com/api/v1.0/email/send", dataFormed)
+      .then((resp) => console.log(resp));
 
     reset();
   };
@@ -56,26 +65,31 @@ export default function Contact() {
           <div>
             <div>
               <ContainerTextInput>
-                <Title className="label">Nome</Title>
-                <Error className="errorM">{errors.name?.message}</Error>
+                <Title for="nameField">Nome</Title>
+                <Error>{errors.name?.message}</Error>
               </ContainerTextInput>
-              <input {...register("name")} name="name" />
+              <input id="nameField" {...register("name")} name="name" />
             </div>
 
             <div>
               <ContainerTextInput>
-                <Title className="label">Email</Title>
-                <Error className="errorM">{errors.email?.message}</Error>
+                <Title for="emailField">Email</Title>
+                <Error>{errors.email?.message}</Error>
               </ContainerTextInput>
-              <input {...register("email")} name="email" />
+              <input id="emailField" {...register("email")} name="email" />
             </div>
 
             <div>
               <ContainerTextInput>
-                <Title className="label">Mensagem</Title>
-                <Error className="errorM">{errors.message?.message}</Error>
+                <Title for="messageField">Mensagem</Title>
+                <Error>{errors.message?.message}</Error>
               </ContainerTextInput>
-              <textarea {...register("message")} name="message" type="text" />
+              <textarea
+                id="messageField"
+                {...register("message")}
+                name="message"
+                type="text"
+              />
             </div>
           </div>
           <button type="submit">Enviar</button>
@@ -86,6 +100,17 @@ export default function Contact() {
             Claro que não tripulante, agora você poderá entrar em contato comigo
             pelo campo ao lado.
           </p>
+          <div id="containerButtons">
+            <button onClick={GitLab} id="Git-Hub">
+              Git-Lab
+            </button>
+            <button onClick={GitHub} id="Git-Hub">
+              Git-Hub
+            </button>
+            <button onClick={linkdIn} id="linkdIn">
+              LinkdIn
+            </button>
+          </div>
         </ContainerText>
       </ContainerContact>
     </ContainerAbout>

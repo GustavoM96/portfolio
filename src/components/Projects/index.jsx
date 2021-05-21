@@ -7,12 +7,11 @@ import Carousel from "react-elastic-carousel";
 import { useState } from "react";
 
 export default function Projects() {
-  const projectList = [
+  const projects = [
     { id: 1, title: "Lig4", image: Lig4 },
     { id: 2, title: "StarWars", image: StarWars },
     { id: 3, title: "Api do Rick e Pokemon", image: RickPok },
   ];
-  const [projects, setProjects] = useState(projectList);
   return (
     <ContainerAbout id="Projects">
       <h1>Portfólio</h1>

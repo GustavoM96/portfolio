@@ -5,7 +5,6 @@ export const ContainerAbout = styled.section`
   color: var(--main-text);
   border-bottom: 2px solid var(--secundary-text);
   width: 90%;
-  margin: 0 auto;
   padding: 50px 35px;
   justify-content: space-between;
 
@@ -91,7 +90,7 @@ export const ContainerText = styled.div`
   width: 45%;
 `;
 
-export const Title = styled.p`
+export const Title = styled.label`
   margin: 0;
 `;
 

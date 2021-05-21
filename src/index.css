@@ -9,18 +9,19 @@ html {
   scrollbar-color: var(--secundary-color) white;
 }
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
+  margin: 0 0 50px 0;
 }
 h2 {
   font-size: 2rem;
+  margin: 0 0 50px 0;
 }
-p {
+p,
+label {
   color: var(--secundary-text);
   font-size: 1.3rem;
 }
 
-h1,
-h2,
 figure,
 input,
 textarea,

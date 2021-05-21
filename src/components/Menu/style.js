@@ -23,16 +23,20 @@ export const Menu = styled.header`
     align-items: center;
 
     li {
+      font-size: 12px;
       margin: 10px 0;
       cursor: pointer;
-      height: 100%;
+      height: 40px;
       &:hover {
         color: var(--secundary-text);
       }
       .link {
+        height: 100%;
+        margin: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
       }
     }
   }
