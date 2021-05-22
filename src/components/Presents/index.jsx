@@ -1,11 +1,11 @@
 import React from "react";
 import iconPc from "../../image/astro2.png";
-
-import { ContainerAbout } from "./style";
+import { ContainerPresents, FrameAnima } from "./style";
+import { Frame } from "framer";
 
 export default function Presents() {
   return (
-    <ContainerAbout id="Presents">
+    <ContainerPresents id="Presents">
       <div id="containerText">
         <h1> Bem-Vindo Visitante</h1>
         <p>
@@ -15,8 +15,20 @@ export default function Presents() {
         </p>
       </div>
       <figure>
-        <img src={iconPc} alt="iconPc" />
+        <FrameAnima
+          animate={{ rotate: [0, 45], y: [0, 40] }}
+          transition={{
+            duration: 10,
+            yoyo: Infinity,
+          }}
+          size={200}
+          drag={true}
+          dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+          background="transparent"
+        >
+          <img src={iconPc} alt="iconPc" />
+        </FrameAnima>
       </figure>
-    </ContainerAbout>
+    </ContainerPresents>
   );
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Carousel from "react-elastic-carousel";
 
-export const ContainerAbout = styled.section`
+export const ContainerProjects = styled.section`
   color: var(--main-text);
   width: 90%;
   padding: 50px 35px;
@@ -30,10 +30,6 @@ export const CarouselStyled = styled(Carousel)`
     img {
       width: 100%;
       border-radius: 10px;
-      -webkit-user-drag: none;
-      -khtml-user-drag: none;
-      -moz-user-drag: none;
-      -o-user-drag: none;
     }
   }
 `;

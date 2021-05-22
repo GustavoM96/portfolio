@@ -1,4 +1,4 @@
-import { ContainerAbout, ContainerImages, Animation } from "./style";
+import { ContainerSkills, ContainerImages, Animation } from "./style";
 import Ijs from "../../image/js.svg";
 import Icss from "../../image/css.svg";
 import Ihtml from "../../image/html.svg";
@@ -38,7 +38,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <ContainerAbout id="Skills">
+    <ContainerSkills id="Skills">
       <Animation isShown={isShown}>
         <h1>Tecnologias Exploradas</h1>
 
@@ -51,6 +51,6 @@ export default function Skills() {
           ))}
         </ContainerImages>
       </Animation>
-    </ContainerAbout>
+    </ContainerSkills>
   );
 }

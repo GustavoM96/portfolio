@@ -1,11 +1,9 @@
 import {
-  ContainerAbout,
   Title,
   Error,
   ContainerTextInput,
-  ContainerContact,
   ContainerText,
-  ContainerIcons,
+  ContainerContact,
 } from "./style";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
@@ -70,49 +68,47 @@ export default function Contact() {
   }, []);
 
   return (
-    <ContainerAbout id="Contact">
-      <ContainerContact isShown={isShown}>
-        <form onSubmit={handleSubmit(handleForm)}>
+    <ContainerContact id="Contact" isShown={isShown}>
+      <form onSubmit={handleSubmit(handleForm)}>
+        <div>
           <div>
-            <div>
-              <ContainerTextInput>
-                <Title for="nameField">Nome</Title>
-                <Error>{errors.name?.message}</Error>
-              </ContainerTextInput>
-              <input id="nameField" {...register("name")} name="name" />
-            </div>
-
-            <div>
-              <ContainerTextInput>
-                <Title for="emailField">Email</Title>
-                <Error>{errors.email?.message}</Error>
-              </ContainerTextInput>
-              <input id="emailField" {...register("email")} name="email" />
-            </div>
-
-            <div>
-              <ContainerTextInput>
-                <Title for="messageField">Mensagem</Title>
-                <Error>{errors.message?.message}</Error>
-              </ContainerTextInput>
-              <textarea
-                id="messageField"
-                {...register("message")}
-                name="message"
-                type="text"
-              />
-            </div>
+            <ContainerTextInput>
+              <Title for="nameField">Nome</Title>
+              <Error>{errors.name?.message}</Error>
+            </ContainerTextInput>
+            <input id="nameField" {...register("name")} name="name" />
           </div>
-          <button type="submit">Enviar</button>
-        </form>
-        <ContainerText isShown={isShown}>
-          <h2>Será este o fim?</h2>
-          <p>
-            Claro que não tripulante, agora você poderá entrar em contato comigo
-            pelo campo ao lado.
-          </p>
-        </ContainerText>
-      </ContainerContact>
-    </ContainerAbout>
+
+          <div>
+            <ContainerTextInput>
+              <Title for="emailField">Email</Title>
+              <Error>{errors.email?.message}</Error>
+            </ContainerTextInput>
+            <input id="emailField" {...register("email")} name="email" />
+          </div>
+
+          <div>
+            <ContainerTextInput>
+              <Title for="messageField">Mensagem</Title>
+              <Error>{errors.message?.message}</Error>
+            </ContainerTextInput>
+            <textarea
+              id="messageField"
+              {...register("message")}
+              name="message"
+              type="text"
+            />
+          </div>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+      <ContainerText isShown={isShown}>
+        <h2>Será este o fim?</h2>
+        <p>
+          Claro que não tripulante, agora você poderá entrar em contato comigo
+          pelo campo ao lado.
+        </p>
+      </ContainerText>
+    </ContainerContact>
   );
 }

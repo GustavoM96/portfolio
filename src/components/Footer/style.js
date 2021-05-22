@@ -20,13 +20,11 @@ export const ContainerIcons = styled.div`
     height: 40px;
     margin: 0 0 0 25px;
     :hover img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
     cursor: pointer;
-
     img {
       width: 100%;
-      transition: transform 1s;
     }
   }
 `;

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const ContainerAbout = styled.section`
+export const ContainerContact = styled.section`
+  margin-top: 25px;
+  display: flex;
   color: var(--main-text);
   width: 90%;
   padding: 50px 35px;
@@ -48,7 +50,6 @@ export const ContainerAbout = styled.section`
     margin: 1px 0 15px;
     padding: 12px 16px;
     width: 100%;
-
     height: 125px;
     resize: none;
     border-radius: 10px;
@@ -63,15 +64,6 @@ export const ContainerAbout = styled.section`
       box-shadow: inset 1px 1px 5px white;
     }
   }
-`;
-
-export const ContainerTextInput = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-`;
-
-export const ContainerContact = styled.div`
   form {
     animation: ${({ isShown }) => (isShown ? "showLeft 2s forwards" : "none")};
     opacity: 0.5;
@@ -82,11 +74,14 @@ export const ContainerContact = styled.div`
     flex-direction: column;
     justify-content: space-between;
   }
+`;
 
-  margin-top: 25px;
+export const ContainerTextInput = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 `;
+
 export const ContainerText = styled.div`
   animation: ${({ isShown }) => (isShown ? "showRight 2s forwards" : "none")};
   opacity: 0.5;

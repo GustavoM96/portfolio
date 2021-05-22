@@ -1,4 +1,4 @@
-import { ContainerAbout, CarouselStyled } from "./style";
+import { ContainerProjects, CarouselStyled } from "./style";
 import Lig4 from "../../image/lig4.png";
 import RickPok from "../../image/rickPok.png";
 import StarWars from "../../image/starWars.png";
@@ -10,7 +10,7 @@ export default function Projects() {
     { id: 3, title: "Api do Rick e Pokemon", image: RickPok },
   ];
   return (
-    <ContainerAbout id="Projects">
+    <ContainerProjects id="Projects">
       <h1>Portfólio</h1>
       <CarouselStyled itemPadding={[0, 50]} transitionMs={1500}>
         {projects.map((project) => (
@@ -20,6 +20,6 @@ export default function Projects() {
           </figure>
         ))}
       </CarouselStyled>
-    </ContainerAbout>
+    </ContainerProjects>
   );
 }

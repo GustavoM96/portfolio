@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerAbout = styled.section`
+export const ContainerSkills = styled.section`
   color: var(--main-text);
   /* height: 100vh; */
   width: 90%;
