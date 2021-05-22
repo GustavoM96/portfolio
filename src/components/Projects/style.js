@@ -3,7 +3,6 @@ import Carousel from "react-elastic-carousel";
 
 export const ContainerAbout = styled.section`
   color: var(--main-text);
-  border-bottom: 2px solid var(--secundary-text);
   width: 90%;
   padding: 50px 35px;
   justify-content: space-between;

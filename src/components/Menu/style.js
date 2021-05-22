@@ -4,7 +4,6 @@ export const Menu = styled.header`
   position: fixed;
   right: 0;
   color: var(--main-text);
-  border-bottom: 2px solid var(--secundary-text);
   width: 120px;
   height: 100vh;
   padding-top: 25px;

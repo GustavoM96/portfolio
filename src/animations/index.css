@@ -1,0 +1,34 @@
+@keyframes showRight {
+  0% {
+    opacity: 0.5;
+    transform: translateX(15%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes showLeft {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-15%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes showFoward {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

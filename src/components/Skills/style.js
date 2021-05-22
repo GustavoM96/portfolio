@@ -2,13 +2,21 @@ import styled from "styled-components";
 
 export const ContainerAbout = styled.section`
   color: var(--main-text);
-  border-bottom: 2px solid var(--secundary-text);
+  /* height: 100vh; */
   width: 90%;
   padding: 50px 35px;
   justify-content: space-between;
+
   h1 {
     text-align: center;
   }
+`;
+
+export const Animation = styled.div`
+  animation: ${({ isShown }) =>
+    isShown ? "showFoward 1.5s  forwards" : "none"};
+  opacity: 0.5;
+  transform: scale(0.9);
 `;
 
 export const ContainerImages = styled.div`

@@ -1,20 +1,10 @@
 import styled from "styled-components";
 
 export const ContainerAbout = styled.section`
-  /* background-color: var(--main-color); */
   color: var(--main-text);
-  border-bottom: 2px solid var(--secundary-text);
   width: 90%;
   padding: 50px 35px;
   justify-content: space-between;
-
-  form {
-    width: 45%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 
   h1 {
     text-align: center;
@@ -34,7 +24,7 @@ export const ContainerAbout = styled.section`
       box-shadow: 0 0 5px white;
     }
     :active {
-      box-shadow: inset 0 0 5px gray;
+      box-shadow: inset 0 0 15px gray;
     }
   }
   input {
@@ -82,16 +72,31 @@ export const ContainerTextInput = styled.div`
 `;
 
 export const ContainerContact = styled.div`
+  form {
+    animation: ${({ isShown }) => (isShown ? "showLeft 2s forwards" : "none")};
+    opacity: 0.5;
+    transform: translateX(-15%);
+    width: 45%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
 `;
 export const ContainerText = styled.div`
+  animation: ${({ isShown }) => (isShown ? "showRight 2s forwards" : "none")};
+  opacity: 0.5;
+  transform: translateX(15%);
   width: 45%;
 `;
 
 export const Title = styled.label`
   margin: 0;
+  font-size: 1.1rem;
 `;
 
 export const Error = styled.p`

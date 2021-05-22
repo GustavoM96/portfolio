@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import iconPc from "../../image/astro2.png";
 
 import { ContainerAbout } from "./style";

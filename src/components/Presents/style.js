@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ContainerAbout = styled.section`
   color: var(--main-text);
-  border-bottom: 2px solid var(--secundary-text);
   width: 90%;
   padding: 100px 35px;
   display: flex;

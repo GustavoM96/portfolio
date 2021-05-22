@@ -5,23 +5,15 @@ import {
   ContainerTextInput,
   ContainerContact,
   ContainerText,
+  ContainerIcons,
 } from "./style";
-import { useState } from "react";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
-  function linkdIn() {
-    window.open("https://www.linkedin.com/in/gustavo-messias/");
-  }
-  function GitLab() {
-    window.open("https://gitlab.com/gustavo.hmessias96/");
-  }
-  function GitHub() {
-    window.open("https://github.com/GustavoM96/");
-  }
   const schema = yup.object().shape({
     name: yup.string().required("Campo Obrigatório"),
     email: yup.string().email("email inválido").required("Campo Obrigatório"),
@@ -57,10 +49,29 @@ export default function Contact() {
 
     reset();
   };
+  const [isShown, setisShown] = useState(false);
+
+  const loadComponent = new IntersectionObserver(
+    (entry) => {
+      console.log(entry[0].intersectionRatio);
+      if (entry[0].intersectionRatio > 0.5) {
+        setisShown(true);
+      }
+      if (entry[0].intersectionRatio == 0) {
+        setisShown(false);
+      }
+    },
+    {
+      threshold: [0, 0.5],
+    }
+  );
+  useEffect(() => {
+    loadComponent.observe(document.getElementById("Contact"));
+  }, []);
 
   return (
     <ContainerAbout id="Contact">
-      <ContainerContact>
+      <ContainerContact isShown={isShown}>
         <form onSubmit={handleSubmit(handleForm)}>
           <div>
             <div>
@@ -94,23 +105,12 @@ export default function Contact() {
           </div>
           <button type="submit">Enviar</button>
         </form>
-        <ContainerText>
+        <ContainerText isShown={isShown}>
           <h2>Será este o fim?</h2>
           <p>
             Claro que não tripulante, agora você poderá entrar em contato comigo
             pelo campo ao lado.
           </p>
-          <div id="containerButtons">
-            <button onClick={GitLab} id="Git-Hub">
-              Git-Lab
-            </button>
-            <button onClick={GitHub} id="Git-Hub">
-              Git-Hub
-            </button>
-            <button onClick={linkdIn} id="linkdIn">
-              LinkdIn
-            </button>
-          </div>
         </ContainerText>
       </ContainerContact>
     </ContainerAbout>

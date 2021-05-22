@@ -1,10 +1,7 @@
 import { ContainerAbout, CarouselStyled } from "./style";
 import Lig4 from "../../image/lig4.png";
-import Login from "../../image/login.png";
 import RickPok from "../../image/rickPok.png";
 import StarWars from "../../image/starWars.png";
-import Carousel from "react-elastic-carousel";
-import { useState } from "react";
 
 export default function Projects() {
   const projects = [

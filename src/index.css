@@ -21,6 +21,10 @@ label {
   color: var(--secundary-text);
   font-size: 1.3rem;
 }
+hr {
+  width: 100%;
+  margin: 0;
+}
 
 figure,
 input,

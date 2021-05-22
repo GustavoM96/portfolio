@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ContainerAbout = styled.section`
   /* background-color: var(--main-color); */
   color: var(--main-text);
-  border-bottom: 2px solid var(--secundary-text);
   width: 90%;
   padding: 50px 35px;
   h1 {
@@ -16,6 +15,10 @@ export const ContainerInfo = styled.div`
   justify-content: space-between;
   margin-top: 25px;
   figure {
+    animation: ${({ isShown }) =>
+      isShown ? "showRight 2s  forwards" : "none"};
+    opacity: 0.5;
+    transform: translateX(15%);
     max-width: 350px;
     width: 40%;
     img {
@@ -24,6 +27,9 @@ export const ContainerInfo = styled.div`
     }
   }
   #containerText {
+    animation: ${({ isShown }) => (isShown ? "showLeft 2s  forwards" : "none")};
+    opacity: 0.5;
+    transform: translateX(-15%);
     max-width: 350px;
   }
   @media (min-width: 650px) {

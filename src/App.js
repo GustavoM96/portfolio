@@ -8,9 +8,10 @@ import Footer from "./components/Footer";
 import ContainerMax from "./components/containerMax";
 import { Star, Star3, Star2 } from "./styles/stars";
 import { BackGround } from "./styles/backGround";
-
 import ContainerMain from "./components/containerMain";
 import Contact from "./components/Contact";
+import { Diviser } from "./styles/diviser";
+import "./animations/index.css";
 function App() {
   return (
     <>
@@ -24,10 +25,15 @@ function App() {
         </>
         <ContainerMain>
           <Presents />
+          <Diviser />
           <About />
+          <Diviser />
           <Skills />
+          <Diviser />
           <Projects />
+          <Diviser />
           <Contact />
+          <Diviser />
           <Footer />
         </ContainerMain>
       </ContainerMax>

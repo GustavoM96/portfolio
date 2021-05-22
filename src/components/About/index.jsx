@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Avatar from "../../image/Avatar.jpg";
-
 import { ContainerAbout, ContainerInfo } from "./style";
 
 export default function About() {
+  const [isShown, setisShown] = useState(false);
+
+  const loadComponent = new IntersectionObserver(
+    (entry) => {
+      console.log(entry[0].intersectionRatio);
+      if (entry[0].intersectionRatio > 0.5) {
+        setisShown(true);
+      }
+      if (entry[0].intersectionRatio == 0) {
+        setisShown(false);
+      }
+    },
+    {
+      threshold: [0, 0.5],
+    }
+  );
+  useEffect(() => {
+    loadComponent.observe(document.getElementById("About"));
+  }, []);
   return (
     <ContainerAbout id="About">
-      <ContainerInfo>
+      <ContainerInfo isShown={isShown}>
         <figure>
           <img src={Avatar} alt="Gustavo" />
         </figure>
