@@ -11,7 +11,7 @@ export default function Presents() {
         <p>
           Olá tudo bem? Eu me chamo Gustavo e sou Desenvolvedor{" "}
           <strong>Front-End</strong>. Criei essa página para que você possa me
-          conhecher um pouco melhor.
+          conhecer um pouco melhor.
         </p>
       </div>
       <figure>
@@ -23,7 +23,7 @@ export default function Presents() {
           }}
           size={200}
           drag={true}
-          dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+          dragConstraints={{ left: -200, right: 100, top: -100, bottom: 200 }}
           background="transparent"
         >
           <img src={iconPc} alt="iconPc" />

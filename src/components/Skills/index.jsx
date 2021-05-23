@@ -6,6 +6,7 @@ import Ireact from "../../image/react.svg";
 import Iredux from "../../image/redux.svg";
 import Igit from "../../image/git.svg";
 import { useEffect, useState } from "react";
+import { useObserver } from "../../services/intersectionObserver";
 
 export default function Skills() {
   const techs = [
@@ -18,20 +19,7 @@ export default function Skills() {
   ];
   const [isShown, setisShown] = useState(false);
 
-  const loadComponent = new IntersectionObserver(
-    (entry) => {
-      console.log(entry[0].intersectionRatio);
-      if (entry[0].intersectionRatio > 0.5) {
-        setisShown(true);
-      }
-      if (entry[0].intersectionRatio == 0) {
-        setisShown(false);
-      }
-    },
-    {
-      threshold: [0, 0.5],
-    }
-  );
+  const loadComponent = useObserver(setisShown);
 
   useEffect(() => {
     loadComponent.observe(document.getElementById("Skills"));

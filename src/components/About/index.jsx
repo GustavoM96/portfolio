@@ -1,24 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Avatar from "../../image/Avatar.jpg";
+import { useObserver } from "../../services/intersectionObserver";
 import { ContainerAbout, ContainerInfo } from "./style";
 
 export default function About() {
   const [isShown, setisShown] = useState(false);
+  const loadComponent = useObserver(setisShown);
 
-  const loadComponent = new IntersectionObserver(
-    (entry) => {
-      console.log(entry[0].intersectionRatio);
-      if (entry[0].intersectionRatio > 0.5) {
-        setisShown(true);
-      }
-      if (entry[0].intersectionRatio == 0) {
-        setisShown(false);
-      }
-    },
-    {
-      threshold: [0, 0.5],
-    }
-  );
   useEffect(() => {
     loadComponent.observe(document.getElementById("About"));
   }, []);

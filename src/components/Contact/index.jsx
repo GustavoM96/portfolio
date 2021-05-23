@@ -10,6 +10,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useObserver } from "../../services/intersectionObserver";
+import Footer from "../Footer";
+import { Diviser } from "../../styles/diviser";
 
 export default function Contact() {
   const schema = yup.object().shape({
@@ -49,20 +52,8 @@ export default function Contact() {
   };
   const [isShown, setisShown] = useState(false);
 
-  const loadComponent = new IntersectionObserver(
-    (entry) => {
-      console.log(entry[0].intersectionRatio);
-      if (entry[0].intersectionRatio > 0.5) {
-        setisShown(true);
-      }
-      if (entry[0].intersectionRatio == 0) {
-        setisShown(false);
-      }
-    },
-    {
-      threshold: [0, 0.5],
-    }
-  );
+  const loadComponent = useObserver(setisShown);
+
   useEffect(() => {
     loadComponent.observe(document.getElementById("Contact"));
   }, []);
