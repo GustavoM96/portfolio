@@ -18,18 +18,16 @@ export const ContainerProjects = styled.section`
 `;
 
 export const Animation = styled.div`
-  animation: ${({ isShown }) =>
-    isShown ? "showFoward 1.5s  forwards" : "none"};
+  animation: ${({ isShown }) => (isShown ? "showUp 2s  forwards" : "none")};
   opacity: 0.5;
-  transform: scale(0.9);
+  transform: translateY(10%);
 `;
 
 export const ContainerList = styled.div`
-  /* width: 80%; */
-
   opacity: 0.5;
 
-  transform: translateY(20%);
+  transform: translateY(10%);
+
   animation: ${({ isShown }) => (isShown ? "showUp 1s  forwards" : "none")};
   margin: 20px 0;
   display: flex;

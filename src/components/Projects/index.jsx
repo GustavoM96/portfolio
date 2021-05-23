@@ -9,6 +9,9 @@ import {
 import Lig4 from "../../image/lig4.png";
 import RickPok from "../../image/rickPok.png";
 import StarWars from "../../image/starWars.png";
+import gifLig4 from "../../image/lig4.gif";
+import gifRickPok from "../../image/rickPok.gif";
+import gifStarWars from "../../image/starWars.gif";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import LiveTvIcon from "@material-ui/icons/LiveTv";
 import { useEffect, useState } from "react";
@@ -20,18 +23,22 @@ export default function Projects() {
       id: 1,
       title: "Lig4",
       image: Lig4,
+      gif: gifLig4,
       url: "https://gustavo.hmessias96.gitlab.io/lig4/",
     },
     {
       id: 2,
       title: "StarWars",
       image: StarWars,
+      gif: gifStarWars,
       url: "https://gustavo.hmessias96.gitlab.io/jogo_azar/",
     },
     {
       id: 3,
       title: "RikPok Api",
       image: RickPok,
+      gif: gifRickPok,
+
       url: "https://colecao-poke-rick.vercel.app/rick",
     },
   ];
@@ -52,8 +59,8 @@ export default function Projects() {
 
   return (
     <ContainerProjects id="Projects">
+      <h1>Portfólio</h1>
       <Animation isShown={isShown}>
-        <h1>Portfólio</h1>
         <CarouselStyled
           ref={(ref) => (carrousel = ref)}
           itemPadding={[2, 25]}
@@ -62,7 +69,7 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <figure key={project.id}>
-              <img src={project.image} alt={project.title} />
+              <img src={project.gif} alt={project.title} />
             </figure>
           ))}
         </CarouselStyled>

@@ -31,7 +31,7 @@ export default function ButtonAppBar() {
                 spy={true}
                 offset={-30}
                 smooth={true}
-                duration={1500}
+                duration={2000}
               >
                 {React.createElement(link.icon)}
                 {link.title}

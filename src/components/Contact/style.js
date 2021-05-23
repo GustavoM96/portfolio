@@ -65,7 +65,7 @@ export const ContainerContact = styled.section`
     }
   }
   form {
-    animation: ${({ isShown }) => (isShown ? "showLeft 2s forwards" : "none")};
+    animation: ${({ isShown }) => (isShown ? "showLeft 2s  forwards" : "none")};
     opacity: 0.5;
     transform: translateX(-15%);
     width: 45%;
@@ -83,7 +83,7 @@ export const ContainerTextInput = styled.div`
 `;
 
 export const ContainerText = styled.div`
-  animation: ${({ isShown }) => (isShown ? "showRight 2s forwards" : "none")};
+  animation: ${({ isShown }) => (isShown ? "showRight 2s  forwards" : "none")};
   opacity: 0.5;
   transform: translateX(15%);
   width: 45%;

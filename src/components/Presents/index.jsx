@@ -7,16 +7,19 @@ export default function Presents() {
   return (
     <ContainerPresents id="Presents">
       <div id="containerText">
-        <h1> Bem-Vindo Visitante</h1>
+        <h1>Hello World!!!</h1>
         <p>
-          Olá tudo bem? Eu me chamo Gustavo e sou Desenvolvedor{" "}
-          <strong>Front-End</strong>. Criei essa página para que você possa me
-          conhecer um pouco melhor.
+          Olá ser de outro planeta. Eu sou <strong>Gustavo</strong>, o Criador
+          deste mundo.
+        </p>
+        <p>
+          Venha navegar por está página e descubra um pouco sobre quem eu sou e
+          o que eu faço.
         </p>
       </div>
       <figure>
         <FrameAnima
-          animate={{ rotate: [0, 45], y: [0, 40] }}
+          animate={{ rotate: [0, 45] }}
           transition={{
             duration: 10,
             yoyo: Infinity,

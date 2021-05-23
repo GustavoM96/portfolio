@@ -16,7 +16,7 @@ export const Animation = styled.div`
   animation: ${({ isShown }) =>
     isShown ? "showFoward 1.5s  forwards" : "none"};
   opacity: 0.5;
-  transform: scale(0.9);
+  transform: scale(0.95);
 `;
 
 export const ContainerImages = styled.div`

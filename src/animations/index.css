@@ -24,7 +24,7 @@
 @keyframes showUp {
   0% {
     opacity: 0.5;
-    transform: translateY(20%);
+    transform: translateY(10%);
   }
 
   100% {
@@ -36,11 +36,20 @@
 @keyframes showFoward {
   0% {
     opacity: 0.5;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
 
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  10% {
+    width: 14ch;
   }
 }
