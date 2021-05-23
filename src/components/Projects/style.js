@@ -10,22 +10,28 @@ export const ContainerProjects = styled.section`
   h1 {
     text-align: center;
   }
+  img {
+    box-shadow: 0 0 2px white;
+  }
 `;
 
 export const ContainerList = styled.div`
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
 `;
 export const ContainerButton = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #0005;
+  background-color: #000b;
   width: 100%;
   height: 100%;
   text-align: right;
   display: none;
   justify-content: space-around;
+  border-radius: 10px;
+
   button {
     cursor: pointer;
     background-color: transparent;
@@ -42,18 +48,25 @@ export const ContainerButton = styled.div`
 `;
 
 export const ProjectCard = styled.div`
-  width: 30%;
+  width: 216px;
+  margin: 10px 10px;
   figure {
     position: relative;
     width: 100%;
     height: 80%;
+
     :hover #containerButton {
       display: flex;
     }
+    figcaption {
+      font-size: 1.3rem;
+    }
 
     img {
+      border-radius: 10px;
       width: 100%;
       height: 100%;
+      box-shadow: 0 0 2px white;
     }
   }
 `;
