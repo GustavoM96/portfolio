@@ -5,8 +5,10 @@ export const ContainerProjects = styled.section`
   color: var(--main-text);
   width: 90%;
   padding: 50px 35px;
+  /* display: flex;
+  flex-direction: column;
   justify-content: space-between;
-
+  align-items: center; */
   h1 {
     text-align: center;
   }
@@ -15,9 +17,23 @@ export const ContainerProjects = styled.section`
   }
 `;
 
+export const Animation = styled.div`
+  animation: ${({ isShown }) =>
+    isShown ? "showFoward 1.5s  forwards" : "none"};
+  opacity: 0.5;
+  transform: scale(0.9);
+`;
+
 export const ContainerList = styled.div`
+  /* width: 80%; */
+
+  opacity: 0.5;
+
+  transform: translateY(20%);
+  animation: ${({ isShown }) => (isShown ? "showUp 1s  forwards" : "none")};
+  margin: 20px 0;
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: center;
   flex-wrap: wrap;
 `;
 export const ContainerButton = styled.div`
@@ -29,10 +45,13 @@ export const ContainerButton = styled.div`
   height: 100%;
   text-align: right;
   display: none;
+  align-items: center;
   justify-content: space-around;
   border-radius: 10px;
 
   button {
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -41,15 +60,15 @@ export const ContainerButton = styled.div`
       color: var(--secundary-text);
     }
     .icon {
-      width: 40px;
-      height: 40px;
+      width: 35px;
+      height: 35px;
     }
   }
 `;
 
 export const ProjectCard = styled.div`
-  width: 216px;
-  margin: 10px 10px;
+  width: 210px;
+  margin: 15px 15px;
   figure {
     position: relative;
     width: 100%;

@@ -4,6 +4,7 @@ import {
   CarouselStyled,
   ProjectCard,
   ContainerList,
+  Animation,
 } from "./style";
 import Lig4 from "../../image/lig4.png";
 import RickPok from "../../image/rickPok.png";
@@ -11,6 +12,7 @@ import StarWars from "../../image/starWars.png";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import LiveTvIcon from "@material-ui/icons/LiveTv";
 import { useEffect, useState } from "react";
+import { useObserver } from "../../services/intersectionObserver";
 
 export default function Projects() {
   const projects = [
@@ -40,23 +42,32 @@ export default function Projects() {
   const handleImage = (numImage) => {
     carrousel.goTo(numImage - 1);
   };
+  const [isShown, setisShown] = useState(false);
 
-  const [imageNum, setimageNum] = useState(0);
+  const loadComponent = useObserver(setisShown);
+
+  useEffect(() => {
+    loadComponent.observe(document.getElementById("Projects"));
+  }, []);
+
   return (
     <ContainerProjects id="Projects">
-      <h1>Portfólio</h1>
-      <CarouselStyled
-        ref={(ref) => (carrousel = ref)}
-        itemPadding={[2, 50]}
-        transitionMs={1500}
-      >
-        {projects.map((project) => (
-          <figure key={project.id}>
-            <img src={project.image} alt={project.title} />
-          </figure>
-        ))}
-      </CarouselStyled>
-      <ContainerList>
+      <Animation isShown={isShown}>
+        <h1>Portfólio</h1>
+        <CarouselStyled
+          ref={(ref) => (carrousel = ref)}
+          itemPadding={[2, 25]}
+          transitionMs={1500}
+          showArrows={false}
+        >
+          {projects.map((project) => (
+            <figure key={project.id}>
+              <img src={project.image} alt={project.title} />
+            </figure>
+          ))}
+        </CarouselStyled>
+      </Animation>
+      <ContainerList isShown={isShown}>
         {projects.map((project) => (
           <ProjectCard>
             <figure key={project.id}>

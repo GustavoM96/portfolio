@@ -2,7 +2,7 @@ export const useObserver = (setisShown) => {
   return new IntersectionObserver(
     (entry) => {
       console.log(entry[0].intersectionRatio);
-      if (entry[0].intersectionRatio > 0.4) {
+      if (entry[0].intersectionRatio > 0.3) {
         setisShown(true);
       }
       if (entry[0].intersectionRatio < 0.1) {
@@ -10,7 +10,7 @@ export const useObserver = (setisShown) => {
       }
     },
     {
-      threshold: [0, 0.5],
+      threshold: [0.1, 0.4],
     }
   );
 };

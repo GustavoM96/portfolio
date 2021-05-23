@@ -21,6 +21,18 @@
     transform: translateX(0%);
   }
 }
+@keyframes showUp {
+  0% {
+    opacity: 0.5;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
 @keyframes showFoward {
   0% {
     opacity: 0.5;
