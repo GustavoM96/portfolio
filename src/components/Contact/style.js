@@ -21,12 +21,16 @@ export const ContainerContact = styled.section`
     cursor: pointer;
     background-color: var(--main-text);
     color: var(--main-color);
-    border: 1px solid var(--main-text);
+    border: 2px solid var(--main-text);
     &:hover {
       box-shadow: 0 0 5px white;
     }
     :active {
       box-shadow: inset 0 0 15px gray;
+    }
+    &:disabled {
+      box-shadow: inset 0 0 15px gray;
+      cursor: default;
     }
   }
   input {

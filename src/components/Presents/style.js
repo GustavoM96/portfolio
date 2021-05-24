@@ -8,6 +8,7 @@ export const ContainerPresents = styled.section`
   width: 90%;
   height: 100vh;
   padding: 0 35px;
+  max-height: 1200px;
   /* box-sizing: border-box; */
   align-items: center;
   display: flex;

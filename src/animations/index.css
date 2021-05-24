@@ -1,45 +1,45 @@
 @keyframes showRight {
-  0% {
+  from {
     opacity: 0.5;
     transform: translateX(15%);
   }
 
-  100% {
+  to {
     opacity: 1;
     transform: translateX(0%);
   }
 }
 
 @keyframes showLeft {
-  0% {
+  from {
     opacity: 0.5;
     transform: translateX(-15%);
   }
 
-  100% {
+  to {
     opacity: 1;
     transform: translateX(0%);
   }
 }
 @keyframes showUp {
-  0% {
+  from {
     opacity: 0.5;
     transform: translateY(10%);
   }
 
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0%);
   }
 }
 
 @keyframes showFoward {
-  0% {
+  from {
     opacity: 0.5;
     transform: scale(0.95);
   }
 
-  100% {
+  to {
     opacity: 1;
     transform: scale(1);
   }

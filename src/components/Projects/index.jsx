@@ -59,8 +59,8 @@ export default function Projects() {
 
   return (
     <ContainerProjects id="Projects">
-      <h1>Portfólio</h1>
       <Animation isShown={isShown}>
+        <h1>Portfólio</h1>
         <CarouselStyled
           ref={(ref) => (carrousel = ref)}
           itemPadding={[2, 25]}

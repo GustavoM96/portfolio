@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 import { useObserver } from "../../services/intersectionObserver";
 import Footer from "../Footer";
 import { Diviser } from "../../styles/diviser";
+import TransitionsModal from "../modal";
 
 export default function Contact() {
   const schema = yup.object().shape({
@@ -34,7 +35,7 @@ export default function Contact() {
     const dataFormed = {
       service_id: "gmailMessage",
       template_id: "template",
-      user_id: "user_Kc790HNAepEsTC7SwSFAx",
+      // user_id: "user_Kc790HNAepEsTC7SwSFAx",
       template_params: {
         from_email: data.email,
         from_name: data.name,
@@ -43,14 +44,34 @@ export default function Contact() {
         subject: "Alguém mandou uma mensagem do PORTIFOLIO",
       },
     };
+    settextButton("Enviando");
+    setdisabledButton(true);
 
     axios
       .post("https://api.emailjs.com/api/v1.0/email/send", dataFormed)
-      .then((resp) => console.log(resp));
-
-    reset();
+      .then((resp) => {
+        settextButton("Enviar");
+        setdisabledButton(false);
+        setisOpen(true);
+        setmessageWasSend(true);
+        reset();
+        console.log(resp);
+      })
+      .catch((resp) => {
+        settextButton("Enviar");
+        setdisabledButton(false);
+        setmessageWasSend(false);
+        setisOpen(true);
+        setmessageData(data);
+        console.log(resp);
+      });
   };
+  const [textButton, settextButton] = useState("Enviar");
   const [isShown, setisShown] = useState(false);
+  const [disabledButton, setdisabledButton] = useState(false);
+  const [isOpen, setisOpen] = useState(false);
+  const [messageWasSend, setmessageWasSend] = useState(true);
+  const [messageData, setmessageData] = useState({});
 
   const loadComponent = useObserver(setisShown);
 
@@ -69,7 +90,6 @@ export default function Contact() {
             </ContainerTextInput>
             <input id="nameField" {...register("name")} name="name" />
           </div>
-
           <div>
             <ContainerTextInput>
               <Title for="emailField">Email</Title>
@@ -91,7 +111,9 @@ export default function Contact() {
             />
           </div>
         </div>
-        <button type="submit">Enviar</button>
+        <button type="submit" disabled={disabledButton}>
+          {textButton}
+        </button>
       </form>
       <ContainerText isShown={isShown}>
         <h2>Será este o fim?</h2>
@@ -100,6 +122,12 @@ export default function Contact() {
           pelo campo ao lado.
         </p>
       </ContainerText>
+      <TransitionsModal
+        messageData={messageData}
+        messageWasSend={messageWasSend}
+        isOpen={isOpen}
+        setisOpen={setisOpen}
+      />
     </ContainerContact>
   );
 }
