@@ -13,13 +13,23 @@ import { useEffect, useState } from "react";
 import { useObserver } from "../../services/intersectionObserver";
 import Footer from "../Footer";
 import { Diviser } from "../../styles/diviser";
-import TransitionsModal from "../modal";
+import TransitionsModal from "../Modal";
 
 export default function Contact() {
   const schema = yup.object().shape({
-    name: yup.string().required("Campo Obrigatório"),
-    email: yup.string().email("email inválido").required("Campo Obrigatório"),
-    message: yup.string().required("Campo Obrigatório"),
+    name: yup
+      .string()
+      .max(128, "máx 128 caracteres")
+      .required("Campo Obrigatório"),
+    email: yup
+      .string()
+      .max(128, "máx 128 caracteres")
+      .email("email inválido")
+      .required("Campo Obrigatório"),
+    message: yup
+      .string()
+      .max(1024, "máx 1024 caracteres")
+      .required("Campo Obrigatório"),
   });
   const {
     register,
@@ -31,39 +41,37 @@ export default function Contact() {
   });
 
   const handleForm = (data) => {
-    console.log(data);
+    const handleRequest = (data, hasPostMessage) => {
+      settextButton("Enviar");
+      setdisabledButton(false);
+      setmessageWasSend(hasPostMessage);
+      setmessageData(data);
+      setisOpen(true);
+    };
     const dataFormed = {
       service_id: "gmailMessage",
       template_id: "template",
-      // user_id: "user_Kc790HNAepEsTC7SwSFAx",
+      user_id: "user_Kc790HNAepEsTC7SwSFAx",
       template_params: {
         from_email: data.email,
         from_name: data.name,
         message: data.message,
         to_name: "Gustavo Henrique Messias",
-        subject: "Alguém mandou uma mensagem do PORTIFOLIO",
+        subject: "Alguém mandou uma mensagem do PORTFOLIO",
       },
     };
+    console.log(data);
     settextButton("Enviando");
     setdisabledButton(true);
 
     axios
       .post("https://api.emailjs.com/api/v1.0/email/send", dataFormed)
       .then((resp) => {
-        settextButton("Enviar");
-        setdisabledButton(false);
-        setisOpen(true);
-        setmessageWasSend(true);
+        handleRequest(data, true);
         reset();
-        console.log(resp);
       })
       .catch((resp) => {
-        settextButton("Enviar");
-        setdisabledButton(false);
-        setmessageWasSend(false);
-        setisOpen(true);
-        setmessageData(data);
-        console.log(resp);
+        handleRequest(data, false);
       });
   };
   const [textButton, settextButton] = useState("Enviar");

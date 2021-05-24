@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import iconPc from "../../image/astro2.png";
-import { ContainerPresents, FrameAnima } from "./style";
+import { ContainerPresents, FrameAnima, ContainerMove } from "./style";
 import { Frame } from "framer";
 
 export default function Presents() {
+  const [getStarMan, setgetStarMan] = useState(false);
+
   return (
     <ContainerPresents id="Presents">
       <div id="containerText">
@@ -17,21 +19,25 @@ export default function Presents() {
           o que eu faço.
         </p>
       </div>
-      <figure>
-        <FrameAnima
-          animate={{ rotate: [0, 45] }}
-          transition={{
-            duration: 10,
-            yoyo: Infinity,
-          }}
-          size={200}
-          drag={true}
-          dragConstraints={{ left: -200, right: 100, top: -100, bottom: 200 }}
-          background="transparent"
-        >
-          <img src={iconPc} alt="iconPc" />
-        </FrameAnima>
-      </figure>
+      <ContainerMove>
+        {!getStarMan && <p>Move!</p>}
+        <figure>
+          <FrameAnima
+            onDrag={() => setgetStarMan(true)}
+            animate={{ rotate: [0, 45] }}
+            transition={{
+              duration: 10,
+              yoyo: Infinity,
+            }}
+            size={200}
+            drag={true}
+            dragConstraints={{ left: -200, right: 0, top: -100, bottom: 200 }}
+            background="transparent"
+          >
+            <img src={iconPc} alt="iconPc" />
+          </FrameAnima>
+        </figure>
+      </ContainerMove>
     </ContainerPresents>
   );
 }

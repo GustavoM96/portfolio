@@ -3,7 +3,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import { ContainerModal, ContainerButton, ContainerTitle } from "./style";
+import {
+  ContainerModal,
+  ContainerButton,
+  ContainerTitle,
+  Message,
+} from "./style";
 import Irocket from "../../image/rocket.svg";
 import Icancel from "../../image/cancel.svg";
 
@@ -14,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   paper: {
-    background: "radial-gradient(ellipse at bottom, #1b2735 0%, #000 60%)",
+    background: "radial-gradient(ellipse at bottom, #1b2735 0%, #000 55%)",
     border: "2px solid #fff",
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
@@ -55,7 +60,7 @@ export default function TransitionsModal({
         <Fade in={isOpen}>
           <ContainerModal>
             <div className={classes.paper}>
-              {!messageWasSend ? (
+              {messageWasSend ? (
                 <>
                   <ContainerTitle>
                     <img src={Irocket} alt="Irocket" />
@@ -64,7 +69,9 @@ export default function TransitionsModal({
                   </ContainerTitle>
                   <p>{messageData.name}</p>
                   <p>{messageData.email}</p>
-                  <p>{messageData.message}</p>
+                  <Message>
+                    <p>{messageData.message}</p>
+                  </Message>
                 </>
               ) : (
                 <>

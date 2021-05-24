@@ -7,7 +7,8 @@ export const ContainerModal = styled.div`
     font-size: 1.5rem;
   }
   p {
-    font-size: 0.9rem;
+    font-weight: bold;
+    font-size: 1rem;
     word-wrap: break-word;
     margin: 6px 0;
   }
@@ -38,6 +39,20 @@ export const ContainerButton = styled.div`
       box-shadow: inset 0 0 15px gray;
       cursor: default;
     }
+  }
+`;
+
+export const Message = styled.div`
+  margin-top: 20px;
+  border-top: 2px solid var(--main-text);
+  border-bottom: 2px solid var(--main-text);
+
+  border-radius: 10px;
+  padding: 20px 10px;
+  p {
+    font-weight: lighter;
+    color: var(--main-text);
+    font-size: 0.9rem;
   }
 `;
 

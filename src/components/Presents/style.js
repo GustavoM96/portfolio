@@ -35,17 +35,6 @@ export const ContainerPresents = styled.section`
       box-shadow: 0 0 5px white;
     }
   }
-  figure {
-    width: 200px;
-    height: 200px;
-
-    img {
-      width: 100%;
-      :hover {
-        cursor: move;
-      }
-    }
-  }
   #containerText {
     max-width: 450px;
     /* border: 1px solid white;
@@ -61,6 +50,48 @@ export const ContainerPresents = styled.section`
   @media (min-width: 600px) {
     img {
       display: block;
+    }
+  }
+`;
+
+export const ContainerMove = styled.div`
+  /* border: 1px solid white; */
+  width: 200px;
+  height: 200px;
+  position: relative;
+
+  p {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    transform: translateY(-150%);
+    margin: 0;
+    position: absolute;
+    :before {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      left: 20px;
+      transform: translateY(100%);
+
+      z-index: 1;
+      border: solid 10px transparent;
+      border-top-color: #fff;
+    }
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      :hover {
+        cursor: move;
+      }
     }
   }
 `;
