@@ -22,8 +22,8 @@ export default function ButtonAppBar() {
       <Menu>
         <img id="item_logo" src={Logo} alt="logo" />
         <ul>
-          {links.map((link) => (
-            <li>
+          {links.map((link, key) => (
+            <li key={key}>
               <Link
                 className="link"
                 activeClass="active"

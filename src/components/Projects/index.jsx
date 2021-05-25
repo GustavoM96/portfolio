@@ -76,8 +76,8 @@ export default function Projects() {
       </Animation>
       <ContainerList isShown={isShown}>
         {projects.map((project) => (
-          <ProjectCard>
-            <figure key={project.id}>
+          <ProjectCard key={project.id}>
+            <figure>
               <img src={project.image} alt={project.title} />
               <ContainerButton id="containerButton">
                 <button onClick={() => handleImage(project.id)}>

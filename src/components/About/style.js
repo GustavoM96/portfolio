@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerAbout = styled.section`
-  /* background-color: var(--main-color); */
   color: var(--main-text);
   width: 90%;
   padding: 50px 35px;

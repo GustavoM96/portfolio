@@ -31,8 +31,8 @@ export default function Skills() {
         <h1>Tecnologias Exploradas</h1>
 
         <ContainerImages>
-          {techs.map((tech) => (
-            <div>
+          {techs.map((tech, key) => (
+            <div key={key}>
               <img src={tech.icon} alt={tech.title} />
               <figcaption>{tech.title}</figcaption>
             </div>

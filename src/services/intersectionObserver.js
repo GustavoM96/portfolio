@@ -1,7 +1,6 @@
 export const useObserver = (setisShown) => {
   return new IntersectionObserver(
     (entry) => {
-      console.log(entry[0].intersectionRatio);
       if (entry[0].intersectionRatio > 0.3) {
         setisShown(true);
       }

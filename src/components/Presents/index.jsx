@@ -15,7 +15,7 @@ export default function Presents() {
           deste mundo.
         </p>
         <p>
-          Venha navegar por está página e descubra um pouco sobre quem eu sou e
+          Venha navegar por esta página e descubra um pouco sobre quem eu sou e
           o que eu faço.
         </p>
       </div>

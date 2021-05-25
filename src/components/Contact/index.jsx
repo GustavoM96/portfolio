@@ -79,7 +79,11 @@ export default function Contact() {
   const [disabledButton, setdisabledButton] = useState(false);
   const [isOpen, setisOpen] = useState(false);
   const [messageWasSend, setmessageWasSend] = useState(true);
-  const [messageData, setmessageData] = useState({});
+  const [messageData, setmessageData] = useState({
+    name: "name",
+    email: "email",
+    message: "message",
+  });
 
   const loadComponent = useObserver(setisShown);
 
