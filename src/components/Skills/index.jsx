@@ -33,7 +33,7 @@ export default function Skills() {
         <ContainerImages>
           {techs.map((tech, key) => (
             <div key={key}>
-              <img src={tech.icon} alt={tech.title} />
+              <img draggable={false} src={tech.icon} alt={tech.title} />
               <figcaption>{tech.title}</figcaption>
             </div>
           ))}

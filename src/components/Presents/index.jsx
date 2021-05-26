@@ -21,22 +21,22 @@ export default function Presents() {
       </div>
       <ContainerMove>
         {!getStarMan && <p>Move!</p>}
-        <figure>
-          <FrameAnima
-            onDrag={() => setgetStarMan(true)}
-            animate={{ rotate: [0, 45] }}
-            transition={{
-              duration: 10,
-              yoyo: Infinity,
-            }}
-            size={200}
-            drag={true}
-            dragConstraints={{ left: -200, right: 0, top: -100, bottom: 200 }}
-            background="transparent"
-          >
+        <Frame
+          onDrag={() => setgetStarMan(true)}
+          animate={{ rotate: [0, 45] }}
+          transition={{
+            duration: 10,
+            yoyo: Infinity,
+          }}
+          size={200}
+          drag={true}
+          dragConstraints={{ left: -200, right: 0, top: -100, bottom: 200 }}
+          background="transparent"
+        >
+          <figure>
             <img src={iconPc} alt="iconPc" />
-          </FrameAnima>
-        </figure>
+          </figure>
+        </Frame>
       </ContainerMove>
     </ContainerPresents>
   );

@@ -37,6 +37,7 @@ export const ContainerImages = styled.div`
   }
   div {
     text-align: center;
+    width: 160px;
   }
   @media (min-width: 400px) {
     flex-direction: row;

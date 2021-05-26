@@ -38,7 +38,8 @@ export const ContainerButton = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #000b;
+  background-color: #0006;
+  backdrop-filter: blur(5px);
   width: 100%;
   height: 100%;
   text-align: right;
@@ -106,6 +107,7 @@ export const CarouselStyled = styled(Carousel)`
     img {
       width: 100%;
       border-radius: 10px;
+      pointer-events: none;
     }
   }
 `;

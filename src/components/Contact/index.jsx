@@ -19,16 +19,16 @@ export default function Contact() {
   const schema = yup.object().shape({
     name: yup
       .string()
-      .max(128, "máx 128 caracteres")
+      .max(255, "máx 255 caracteres")
       .required("Campo Obrigatório"),
     email: yup
       .string()
-      .max(128, "máx 128 caracteres")
+      .max(255, "máx 255 caracteres")
       .email("email inválido")
       .required("Campo Obrigatório"),
     message: yup
       .string()
-      .max(1024, "máx 1024 caracteres")
+      .max(1023, "máx 1023 caracteres")
       .required("Campo Obrigatório"),
   });
   const {
@@ -61,7 +61,7 @@ export default function Contact() {
       },
     };
     console.log(data);
-    settextButton("Enviando");
+    settextButton("Enviando...");
     setdisabledButton(true);
 
     axios
@@ -133,13 +133,13 @@ export default function Contact() {
           Claro que não tripulante, agora você poderá entrar em contato comigo
           pelo campo ao lado.
         </p>
+        <TransitionsModal
+          messageData={messageData}
+          messageWasSend={messageWasSend}
+          isOpen={isOpen}
+          setisOpen={setisOpen}
+        />
       </ContainerText>
-      <TransitionsModal
-        messageData={messageData}
-        messageWasSend={messageWasSend}
-        isOpen={isOpen}
-        setisOpen={setisOpen}
-      />
     </ContainerContact>
   );
 }

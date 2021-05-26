@@ -39,7 +39,7 @@ export const ContainerContact = styled.section`
     width: 100%;
     border-radius: 10px;
     outline: none;
-    background-color: transparent !important;
+    background-color: transparent;
     color: var(--main-text);
     border: 1px solid var(--main-text);
     &:hover {
