@@ -54,8 +54,7 @@ export const ContainerInfo = styled.div`
     transition-duration: ${({ isShown }) => (isShown ? "2s" : "2s")};
     transition-property: opacity, transform;
     @media (max-width: 400px) {
-      transform: ${({ isShown }) =>
-        isShown ? " translateX(0)" : " translateX(-5%)"};
+      transform: none;
     }
     margin: 0 25px 0 0;
     max-width: 350px;
