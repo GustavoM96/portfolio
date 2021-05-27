@@ -105,7 +105,7 @@ export const Menu = styled.header`
       border-bottom: 1px solid #fff;
 
       li {
-        margin: 8px 0;
+        margin: 7px 0;
       }
     }
     #containerButton {
