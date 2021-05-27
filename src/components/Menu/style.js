@@ -23,7 +23,7 @@ export const Menu = styled.header`
     align-items: center;
 
     li {
-      font-size: 12px;
+      font-size: 16px;
       margin: 10px 0;
       cursor: pointer;
       height: 40px;
@@ -71,14 +71,18 @@ export const Menu = styled.header`
     justify-content: space-between;
     padding: 0;
     img {
-      margin: 0 0 0 50px;
+      margin: 0 0 0 30px;
     }
     ul {
-      width: 40%;
+      width: 50%;
       min-width: 300px;
       flex-direction: row;
       justify-content: space-between;
-      margin: 0 50px 0 0;
+      margin: 0 30px 0 0;
+
+      li {
+        font-size: 12px;
+      }
     }
   }
   @media (max-width: 586px) {
@@ -86,7 +90,7 @@ export const Menu = styled.header`
 
     img {
       margin: 0 0 0 35px;
-      height: 25px;
+      height: 30px;
     }
     ul {
       display: ${({ activeMenu }) => (activeMenu ? "flex" : "none")};
