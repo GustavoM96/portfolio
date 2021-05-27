@@ -63,8 +63,8 @@ export default function Projects() {
         <h1>Portfólio</h1>
         <CarouselStyled
           ref={(ref) => (carrousel = ref)}
-          itemPadding={[2, 25]}
-          transitionMs={1500}
+          itemPadding={[2, 20]}
+          transitionMs={2000}
           showArrows={false}
         >
           {projects.map((project) => (
@@ -73,25 +73,25 @@ export default function Projects() {
             </figure>
           ))}
         </CarouselStyled>
+        <ContainerList isShown={isShown}>
+          {projects.map((project) => (
+            <ProjectCard key={project.id}>
+              <figure>
+                <img src={project.image} alt={project.title} />
+                <ContainerButton id="containerButton">
+                  <button onClick={() => handleImage(project.id)}>
+                    <LiveTvIcon className="icon" />
+                  </button>
+                  <button onClick={() => goToPage(project.url)}>
+                    <VisibilityIcon className="icon" />
+                  </button>
+                </ContainerButton>
+                <figcaption>{project.title}</figcaption>
+              </figure>
+            </ProjectCard>
+          ))}
+        </ContainerList>
       </Animation>
-      <ContainerList isShown={isShown}>
-        {projects.map((project) => (
-          <ProjectCard key={project.id}>
-            <figure>
-              <img src={project.image} alt={project.title} />
-              <ContainerButton id="containerButton">
-                <button onClick={() => handleImage(project.id)}>
-                  <LiveTvIcon className="icon" />
-                </button>
-                <button onClick={() => goToPage(project.url)}>
-                  <VisibilityIcon className="icon" />
-                </button>
-              </ContainerButton>
-              <figcaption>{project.title}</figcaption>
-            </figure>
-          </ProjectCard>
-        ))}
-      </ContainerList>
     </ContainerProjects>
   );
 }

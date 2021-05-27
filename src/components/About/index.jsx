@@ -13,9 +13,6 @@ export default function About() {
   return (
     <ContainerAbout id="About">
       <ContainerInfo isShown={isShown}>
-        <figure>
-          <img src={Avatar} alt="Gustavo" />
-        </figure>
         <div id="containerText">
           <h2>Desenvolvedor em constante desenvolvimento...</h2>
 
@@ -29,6 +26,9 @@ export default function About() {
             cheio de aprendizados e novas descobertas
           </p>
         </div>
+        <figure>
+          <img src={Avatar} alt="Gustavo" />
+        </figure>
       </ContainerInfo>
     </ContainerAbout>
   );

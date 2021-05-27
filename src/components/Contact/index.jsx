@@ -93,53 +93,55 @@ export default function Contact() {
 
   return (
     <ContainerContact id="Contact" isShown={isShown}>
-      <form onSubmit={handleSubmit(handleForm)}>
-        <div>
+      <div id="content">
+        <form onSubmit={handleSubmit(handleForm)}>
           <div>
-            <ContainerTextInput>
-              <Title for="nameField">Nome</Title>
-              <Error>{errors.name?.message}</Error>
-            </ContainerTextInput>
-            <input id="nameField" {...register("name")} name="name" />
-          </div>
-          <div>
-            <ContainerTextInput>
-              <Title for="emailField">Email</Title>
-              <Error>{errors.email?.message}</Error>
-            </ContainerTextInput>
-            <input id="emailField" {...register("email")} name="email" />
-          </div>
+            <div>
+              <ContainerTextInput>
+                <Title for="nameField">Nome</Title>
+                <Error>{errors.name?.message}</Error>
+              </ContainerTextInput>
+              <input id="nameField" {...register("name")} name="name" />
+            </div>
+            <div>
+              <ContainerTextInput>
+                <Title for="emailField">Email</Title>
+                <Error>{errors.email?.message}</Error>
+              </ContainerTextInput>
+              <input id="emailField" {...register("email")} name="email" />
+            </div>
 
-          <div>
-            <ContainerTextInput>
-              <Title for="messageField">Mensagem</Title>
-              <Error>{errors.message?.message}</Error>
-            </ContainerTextInput>
-            <textarea
-              id="messageField"
-              {...register("message")}
-              name="message"
-              type="text"
-            />
+            <div>
+              <ContainerTextInput>
+                <Title for="messageField">Mensagem</Title>
+                <Error>{errors.message?.message}</Error>
+              </ContainerTextInput>
+              <textarea
+                id="messageField"
+                {...register("message")}
+                name="message"
+                type="text"
+              />
+            </div>
           </div>
-        </div>
-        <button type="submit" disabled={disabledButton}>
-          {textButton}
-        </button>
-      </form>
-      <ContainerText isShown={isShown}>
-        <h2>Será este o fim?</h2>
-        <p>
-          Claro que não tripulante, agora você poderá entrar em contato comigo
-          pelo campo ao lado.
-        </p>
-        <TransitionsModal
-          messageData={messageData}
-          messageWasSend={messageWasSend}
-          isOpen={isOpen}
-          setisOpen={setisOpen}
-        />
-      </ContainerText>
+          <button type="submit" disabled={disabledButton}>
+            {textButton}
+          </button>
+        </form>
+        <ContainerText isShown={isShown}>
+          <h2>Será este o fim?</h2>
+          <p>
+            Claro que não tripulante, agora você poderá entrar em contato comigo
+            pelo campo ao lado.
+          </p>
+          <TransitionsModal
+            messageData={messageData}
+            messageWasSend={messageWasSend}
+            isOpen={isOpen}
+            setisOpen={setisOpen}
+          />
+        </ContainerText>
+      </div>
     </ContainerContact>
   );
 }

@@ -1,64 +1,73 @@
 import styled from "styled-components";
 import { Frame } from "framer";
 
-export const FrameAnima = styled(Frame)``;
+export const FrameAnima = styled(Frame)`
+  @media (max-width: 800px) {
+    width: 100% !important;
+    height: 100% !important;
+  }
+`;
 
 export const ContainerPresents = styled.section`
+  @media (max-width: 930px) {
+    padding: 100px 35px 50px;
+    height: initial;
+  }
+  display: flex;
+  align-items: center;
   color: var(--main-text);
   width: 90%;
   height: 100vh;
   padding: 0 35px;
   max-height: 1000px;
-  /* box-sizing: border-box; */
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  p {
-    width: 70%;
+  min-height: 400px;
+  @media (max-width: 710px) {
+    padding: 100px 0px 50px;
   }
-
-  h1 {
-    font-size: 3rem;
-    width: 14ch;
-    animation: typing 20s steps(14) infinite;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  button {
-    margin: 0 5px 15px;
-    padding: 5px;
-    width: 45%;
-    outline: none;
-    cursor: pointer;
-    &:hover {
-      box-shadow: 0 0 5px white;
+  #content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 590px) {
+      flex-direction: column;
+      align-items: center;
     }
   }
   #containerText {
-    max-width: 450px;
-    /* border: 1px solid white;
-    box-shadow: 0 0 10px white;
-    border-radius: 10px; */
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-
-    padding: 25px;
-  }
-  @media (min-width: 600px) {
-    img {
-      display: block;
+    @media (max-width: 930px) {
+      min-width: 310px;
     }
+    @media (max-width: 400px) {
+      margin: 0;
+    }
+    h1 {
+      font-size: 3rem;
+      width: 14ch;
+      animation: ${({ isShown }) =>
+        isShown ? " typing 20s steps(14) infinite;" : "none"};
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    p {
+      width: 80%;
+    }
+    max-width: 450px;
+    min-width: 370px;
+    margin: 0 25px 0 0;
+    width: 60%;
   }
 `;
 
 export const ContainerMove = styled.div`
-  /* border: 1px solid white; */
   width: 200px;
   height: 200px;
   position: relative;
+  margin: 80px 0 0;
+
+  @media (max-width: 800px) {
+    width: 150px;
+    height: 150px;
+  }
 
   p {
     border: 1px solid white;
@@ -88,7 +97,13 @@ export const ContainerMove = styled.div`
     align-items: center;
 
     img {
-      width: 100%;
+      height: 90%;
+
+      animation: ${({ isShown }) =>
+        isShown ? "rotate 10s linear infinite alternate" : "none"};
+      transform: rotate(0deg);
+      transition: transform 5s linear;
+
       :hover {
         cursor: move;
       }

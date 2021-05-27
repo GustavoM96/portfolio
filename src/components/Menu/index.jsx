@@ -7,7 +7,8 @@ import HomeIcon from "@material-ui/icons/Home";
 import InfoIcon from "@material-ui/icons/Info";
 import ListIcon from "@material-ui/icons/List";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
-
+import MenuIcon from "@material-ui/icons/Menu";
+import ClearIcon from "@material-ui/icons/Clear";
 export default function ButtonAppBar() {
   const links = [
     { to: "Presents", title: "Início", icon: HomeIcon },
@@ -16,11 +17,12 @@ export default function ButtonAppBar() {
     { to: "Projects", title: "Projetos", icon: ListIcon },
     { to: "Contact", title: "Contato", icon: AlternateEmailIcon },
   ];
-  const [moveSubject, setmoveSubject] = useState(1);
+  const [activeMenu, setactiveMenu] = useState(false);
+
   return (
     <>
-      <Menu>
-        <img id="item_logo" src={Logo} alt="logo" />
+      <Menu activeMenu={activeMenu}>
+        <img src={Logo} alt="logo" />
         <ul>
           {links.map((link, key) => (
             <li key={key}>
@@ -31,7 +33,7 @@ export default function ButtonAppBar() {
                 spy={true}
                 offset={-30}
                 smooth={true}
-                duration={2000}
+                duration={1000}
               >
                 {React.createElement(link.icon)}
                 {link.title}
@@ -39,6 +41,11 @@ export default function ButtonAppBar() {
             </li>
           ))}
         </ul>
+        <div id="containerButton">
+          <button onClick={() => setactiveMenu(!activeMenu)}>
+            {activeMenu ? <ClearIcon /> : <MenuIcon />}
+          </button>
+        </div>
       </Menu>
     </>
   );

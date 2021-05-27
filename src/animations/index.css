@@ -1,55 +1,17 @@
-@keyframes showRight {
-  from {
-    opacity: 0.5;
-    transform: translateX(15%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-@keyframes showLeft {
-  from {
-    opacity: 0.5;
-    transform: translateX(-15%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-@keyframes showUp {
-  from {
-    opacity: 0.5;
-    transform: translateY(10%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-}
-
-@keyframes showFoward {
-  from {
-    opacity: 0.5;
-    transform: scale(0.95);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @keyframes typing {
   0% {
     width: 0;
   }
   10% {
     width: 14ch;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
   }
 }

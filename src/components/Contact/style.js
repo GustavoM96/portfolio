@@ -6,7 +6,23 @@ export const ContainerContact = styled.section`
   color: var(--main-text);
   width: 90%;
   padding: 50px 35px;
-  justify-content: space-between;
+  display: flex;
+  @media (max-width: 586px) {
+    padding: 50px 0px;
+
+    justify-content: center;
+    align-items: center;
+  }
+  #content {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 586px) {
+      width: 70%;
+      flex-direction: column-reverse;
+    }
+  }
 
   h1 {
     text-align: center;
@@ -69,14 +85,20 @@ export const ContainerContact = styled.section`
     }
   }
   form {
-    animation: ${({ isShown }) => (isShown ? "showLeft 2s  forwards" : "none")};
-    opacity: 0.5;
-    transform: translateX(-15%);
+    opacity: ${({ isShown }) => (isShown ? "1" : "0.5")};
+    transform: ${({ isShown }) =>
+      isShown ? " translateX(0)" : " translateX(-15%)"};
+    transition-duration: ${({ isShown }) => (isShown ? "2s" : "2s")};
+    transition-property: opacity, transform;
+
     width: 45%;
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 586px) {
+      width: 100%;
+    }
   }
 `;
 
@@ -87,10 +109,17 @@ export const ContainerTextInput = styled.div`
 `;
 
 export const ContainerText = styled.div`
-  animation: ${({ isShown }) => (isShown ? "showRight 2s  forwards" : "none")};
-  opacity: 0.5;
-  transform: translateX(15%);
+  opacity: ${({ isShown }) => (isShown ? "1" : "0.5")};
+  transform: ${({ isShown }) =>
+    isShown ? " translateX(0)" : " translateX(15%)"};
+  transition-duration: ${({ isShown }) => (isShown ? "2s" : "2s")};
+  transition-property: opacity, transform;
+
   width: 45%;
+  @media (max-width: 586px) {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 `;
 
 export const Title = styled.label`

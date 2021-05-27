@@ -60,7 +60,7 @@ export default function TransitionsModal({
         <Fade in={isOpen}>
           <ContainerModal>
             <div className={classes.paper}>
-              {!messageWasSend ? (
+              {messageWasSend ? (
                 <>
                   <ContainerTitle>
                     <img src={Irocket} alt="Irocket" />

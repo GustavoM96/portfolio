@@ -3,6 +3,7 @@
   --secundary-color: #1b2735;
   --main-text: #fff;
   --secundary-text: #c2e7d9;
+  --primary-color: #000;
 }
 html {
   scrollbar-width: large;
@@ -25,6 +26,21 @@ hr {
   width: 100%;
   margin: 0;
 }
+@media (max-width: 930px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 75%;
+  }
+}
 img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -32,6 +48,7 @@ img {
   -o-user-drag: none;
   user-select: none;
 }
+/* pointer-events: none; */
 
 figure,
 input,

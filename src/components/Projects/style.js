@@ -2,13 +2,13 @@ import styled from "styled-components";
 import Carousel from "react-elastic-carousel";
 
 export const ContainerProjects = styled.section`
+  @media (max-width: 600px) {
+    padding: 50px 0;
+  }
   color: var(--main-text);
   width: 90%;
   padding: 50px 35px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; */
+
   h1 {
     text-align: center;
   }
@@ -18,17 +18,17 @@ export const ContainerProjects = styled.section`
 `;
 
 export const Animation = styled.div`
-  animation: ${({ isShown }) => (isShown ? "showUp 2s  forwards" : "none")};
-  opacity: 0.5;
-  transform: translateY(10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: ${({ isShown }) => (isShown ? "1" : "0.5")};
+  transform: ${({ isShown }) =>
+    isShown ? " translateY(0)" : " translateY(10%)"};
+  transition-duration: ${({ isShown }) => (isShown ? "2s" : "2s")};
+  transition-property: opacity, transform;
 `;
 
 export const ContainerList = styled.div`
-  opacity: 0.5;
-
-  transform: translateY(10%);
-
-  animation: ${({ isShown }) => (isShown ? "showUp 1s  forwards" : "none")};
   margin: 20px 0;
   display: flex;
   justify-content: center;
@@ -90,7 +90,8 @@ export const ProjectCard = styled.div`
 `;
 
 export const CarouselStyled = styled(Carousel)`
-  /* height: 500px; */
+  width: 100%;
+  min-width: 300px;
   margin-top: 25px;
   justify-content: flex-end;
   .rec-item-wrapper {

@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const ContainerSkills = styled.section`
+  @media (max-width: 600px) {
+    padding: 50px 0;
+  }
   color: var(--main-text);
   /* height: 100vh; */
   width: 90%;
@@ -13,10 +16,13 @@ export const ContainerSkills = styled.section`
 `;
 
 export const Animation = styled.div`
-  animation: ${({ isShown }) =>
-    isShown ? "showFoward 1.5s  forwards" : "none"};
-  opacity: 0.5;
-  transform: scale(0.95);
+  opacity: ${({ isShown }) => (isShown ? "1" : "0.5")};
+  transform: ${({ isShown }) => (isShown ? "scale(1)" : "scale(0.95)")};
+  transition-property: opacity, transform;
+  transition-duration: ${({ isShown }) => (isShown ? "2s" : "2s")};
+
+  /* opacity: 0.5; */
+  /* transform: scale(0.95); */
 `;
 
 export const ContainerImages = styled.div`

@@ -1,15 +1,16 @@
-export const useObserver = (setisShown) => {
+export const useObserver = (setisShown, margin = -125) => {
   return new IntersectionObserver(
     (entry) => {
-      if (entry[0].intersectionRatio > 0.3) {
+      console.log(entry[0]);
+      if (entry[0].isIntersecting) {
         setisShown(true);
-      }
-      if (entry[0].intersectionRatio < 0.1) {
+      } else {
         setisShown(false);
       }
     },
     {
-      threshold: [0.1, 0.4],
+      threshold: [0],
+      rootMargin: `${margin}px`,
     }
   );
 };
