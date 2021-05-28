@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Avatar from "../../image/Avatar.jpg";
 import { useObserver } from "../../services/intersectionObserver";
-import { ContainerAbout, ContainerInfo } from "./style";
+import {
+  ContainerAbout,
+  ContainerImg,
+  ContainerInfo,
+  ContainerText,
+} from "./style";
 
 export default function About() {
   const [isShown, setisShown] = useState(false);
@@ -12,8 +17,8 @@ export default function About() {
   }, []);
   return (
     <ContainerAbout id="About">
-      <ContainerInfo isShown={isShown}>
-        <div id="containerText">
+      <ContainerInfo>
+        <ContainerText isShown={isShown}>
           <h2>Desenvolvedor em constante desenvolvimento...</h2>
 
           <p>
@@ -25,10 +30,10 @@ export default function About() {
             Amo explorar o mundo da programação, nosso universo é grandíssimo
             cheio de aprendizados e novas descobertas
           </p>
-        </div>
-        <figure>
+        </ContainerText>
+        <ContainerImg isShown={isShown}>
           <img src={Avatar} alt="Gustavo" />
-        </figure>
+        </ContainerImg>
       </ContainerInfo>
     </ContainerAbout>
   );
