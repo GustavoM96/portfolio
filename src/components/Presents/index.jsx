@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import iconPc from "../../image/astro2.png";
-import { ContainerPresents, FrameAnima, ContainerMove } from "./style";
-import { Frame } from "framer";
+import {
+  ContainerPresents,
+  FrameAnima,
+  ContainerMove,
+  ContainerInfo,
+  ContainerText,
+} from "./style";
 import { useObserver } from "../../services/intersectionObserver";
 
 export default function Presents() {
@@ -18,8 +23,8 @@ export default function Presents() {
 
   return (
     <ContainerPresents isShown={isShown} id="Presents">
-      <div id="content">
-        <div id="containerText">
+      <ContainerInfo>
+        <ContainerText>
           <h1>Hello World!!!</h1>
           <p>
             Olá ser de outro planeta. Eu sou <strong>Gustavo</strong>, o Criador
@@ -29,7 +34,7 @@ export default function Presents() {
             Venha navegar por esta página e descubra um pouco sobre quem eu sou
             e o que eu faço.
           </p>
-        </div>
+        </ContainerText>
         <ContainerMove isShown={isShown}>
           {!getStarMan && <p>Move!</p>}
           <FrameAnima
@@ -44,7 +49,7 @@ export default function Presents() {
             </figure>
           </FrameAnima>
         </ContainerMove>
-      </div>
+      </ContainerInfo>
     </ContainerPresents>
   );
 }

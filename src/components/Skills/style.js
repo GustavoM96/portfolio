@@ -5,7 +5,6 @@ export const ContainerSkills = styled.section`
     padding: 50px 0;
   }
   color: var(--main-text);
-  /* height: 100vh; */
   width: 90%;
   padding: 50px 35px;
   justify-content: space-between;
@@ -20,9 +19,6 @@ export const Animation = styled.div`
   transform: ${({ isShown }) => (isShown ? "scale(1)" : "scale(0.95)")};
   transition-property: opacity, transform;
   transition-duration: ${({ isShown }) => (isShown ? "2s" : "2s")};
-
-  /* opacity: 0.5; */
-  /* transform: scale(0.95); */
 `;
 
 export const ContainerImages = styled.div`
@@ -53,6 +49,4 @@ export const ContainerImages = styled.div`
   flex-direction: row;
   min-height: 400px;
   flex-wrap: wrap;
-  /* @media (min-width: 400px) {
-  } */
 `;

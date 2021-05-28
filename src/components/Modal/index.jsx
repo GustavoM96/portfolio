@@ -9,8 +9,6 @@ import {
   ContainerTitle,
   Message,
 } from "./style";
-import Irocket from "../../image/rocket.svg";
-import Icancel from "../../image/cancel.svg";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -35,10 +33,6 @@ export default function TransitionsModal({
   images,
 }) {
   const classes = useStyles();
-
-  const handleOpen = () => {
-    setisOpen(true);
-  };
 
   const handleClose = () => {
     setisOpen(false);

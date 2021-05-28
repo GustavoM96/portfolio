@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Frame } from "framer";
 
 export const FrameAnima = styled(Frame)`
+  max-width: 250px !important;
+  max-height: 250px !important;
   @media (max-width: 800px) {
     width: 100% !important;
     height: 100% !important;
@@ -23,38 +25,6 @@ export const ContainerPresents = styled.section`
   min-height: 400px;
   @media (max-width: 710px) {
     padding: 100px 0px 50px;
-  }
-  #content {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    @media (max-width: 590px) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  #containerText {
-    @media (max-width: 930px) {
-      min-width: 310px;
-    }
-    @media (max-width: 400px) {
-      margin: 0;
-    }
-    h1 {
-      font-size: 3rem;
-      width: 14ch;
-      animation: ${({ isShown }) =>
-        isShown ? " typing 20s steps(14) infinite;" : "none"};
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    p {
-      width: 80%;
-    }
-    max-width: 450px;
-    min-width: 370px;
-    margin: 0 25px 0 0;
-    width: 60%;
   }
 `;
 
@@ -109,3 +79,70 @@ export const ContainerMove = styled.div`
     }
   }
 `;
+export const ContainerInfo = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 590px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+export const ContainerText = styled.div`
+  h1 {
+    font-size: 3rem;
+    width: 14ch;
+    animation: ${({ isShown }) =>
+      isShown ? " typing 20s steps(14) infinite;" : "none"};
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  p {
+    width: 80%;
+  }
+  max-width: 450px;
+  min-width: 370px;
+  margin: 0 25px 0 0;
+  width: 60%;
+
+  @media (max-width: 930px) {
+    min-width: 310px;
+  }
+  @media (max-width: 400px) {
+    margin: 0;
+  }
+`;
+
+/* #content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 590px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#containerText {
+  @media (max-width: 930px) {
+    min-width: 310px;
+  }
+  @media (max-width: 400px) {
+    margin: 0;
+  }
+  h1 {
+    font-size: 3rem;
+    width: 14ch;
+    animation: ${({ isShown }) =>
+      isShown ? " typing 20s steps(14) infinite;" : "none"};
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  p {
+    width: 80%;
+  }
+  max-width: 450px;
+  min-width: 370px;
+  margin: 0 25px 0 0;
+  width: 60%;
+} */

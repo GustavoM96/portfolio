@@ -2,9 +2,6 @@ import styled from "styled-components";
 import Carousel from "react-elastic-carousel";
 
 export const ContainerProjects = styled.section`
-  @media (max-width: 600px) {
-    padding: 50px 0;
-  }
   color: var(--main-text);
   width: 90%;
   padding: 50px 35px;
@@ -14,6 +11,9 @@ export const ContainerProjects = styled.section`
   }
   img {
     box-shadow: 0 0 2px white;
+  }
+  @media (max-width: 600px) {
+    padding: 50px 0;
   }
 `;
 
@@ -29,6 +29,7 @@ export const Animation = styled.div`
 `;
 
 export const ContainerList = styled.div`
+  width: 100%;
   margin: 20px 0;
   display: flex;
   justify-content: center;

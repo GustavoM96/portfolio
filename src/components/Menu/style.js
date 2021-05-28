@@ -112,9 +112,9 @@ export const ContainerButton = styled.div`
     height: 30px;
     padding: 0;
 
-    color: white;
+    color: #fff;
     background-color: transparent;
-    border: 1px solid white;
+    border: 1px solid #fff;
     border-radius: 5px;
   }
 

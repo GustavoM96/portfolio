@@ -9,6 +9,10 @@ import {
 import Lig4 from "../../image/lig4.png";
 import RickPok from "../../image/rickPok.png";
 import StarWars from "../../image/starWars.png";
+import MaisImune from "../../image/maisImune.png";
+
+import gifMaisImune from "../../image/maisImune.gif";
+
 import gifLig4 from "../../image/lig4.gif";
 import gifRickPok from "../../image/rickPok.gif";
 import gifStarWars from "../../image/starWars.gif";
@@ -21,17 +25,17 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Lig4",
-      image: Lig4,
-      gif: gifLig4,
-      url: "https://gustavo.hmessias96.gitlab.io/lig4/",
-    },
-    {
-      id: 2,
       title: "StarWars",
       image: StarWars,
       gif: gifStarWars,
       url: "https://gustavo.hmessias96.gitlab.io/jogo_azar/",
+    },
+    {
+      id: 2,
+      title: "Lig4",
+      image: Lig4,
+      gif: gifLig4,
+      url: "https://gustavo.hmessias96.gitlab.io/lig4/",
     },
     {
       id: 3,
@@ -40,6 +44,13 @@ export default function Projects() {
       gif: gifRickPok,
 
       url: "https://colecao-poke-rick.vercel.app/rick",
+    },
+    {
+      id: 4,
+      title: "+Imune",
+      image: MaisImune,
+      gif: gifMaisImune,
+      url: "https://mais-imune.vercel.app",
     },
   ];
   let carrousel;
