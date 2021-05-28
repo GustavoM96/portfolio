@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logo from "../../image/Logo.svg";
-import { Menu } from "./style";
+import { ContainerButton, Menu } from "./style";
 import { Link } from "react-scroll";
 import ComputerIcon from "@material-ui/icons/Computer";
 import HomeIcon from "@material-ui/icons/Home";
@@ -41,11 +41,11 @@ export default function ButtonAppBar() {
             </li>
           ))}
         </ul>
-        <div id="containerButton">
+        <ContainerButton>
           <button onClick={() => setactiveMenu(!activeMenu)}>
             {activeMenu ? <ClearIcon /> : <MenuIcon />}
           </button>
-        </div>
+        </ContainerButton>
       </Menu>
     </>
   );

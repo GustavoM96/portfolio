@@ -43,25 +43,6 @@ export const Menu = styled.header`
   img {
     height: 45px;
   }
-  #containerButton {
-    display: none;
-    width: 100px;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    button {
-      width: 30px;
-      height: 30px;
-      padding: 0;
-
-      color: white;
-      background-color: transparent;
-      border: 1px solid white;
-      border-radius: 5px;
-    }
-    :active {
-    }
-  }
 
   @media (max-width: 930px) {
     background-color: #000e;
@@ -120,3 +101,42 @@ export const Menu = styled.header`
     }
   }
 `;
+export const ContainerButton = styled.div`
+  display: none;
+  width: 100px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 586px) {
+    display: flex;
+  }
+`;
+
+/* #containerButton {
+  display: none;
+  width: 100px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+} */

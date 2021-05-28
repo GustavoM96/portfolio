@@ -30,6 +30,7 @@ export const ContainerIcons = styled.div`
     :hover img {
       transform: scale(1.05);
     }
+
     img {
       width: 100%;
     }
