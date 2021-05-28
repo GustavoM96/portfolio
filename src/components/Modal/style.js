@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const ContainerModal = styled.div`
   max-width: 400px;
+  width: 40%;
+  min-width: 300px;
   h1 {
     color: var(--main-text);
     font-size: 1.5rem;

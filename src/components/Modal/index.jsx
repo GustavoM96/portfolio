@@ -32,6 +32,7 @@ export default function TransitionsModal({
   messageWasSend,
   isOpen,
   setisOpen,
+  images,
 }) {
   const classes = useStyles();
 
@@ -63,8 +64,7 @@ export default function TransitionsModal({
               {messageWasSend ? (
                 <>
                   <ContainerTitle>
-                    <img src={Irocket} alt="Irocket" />
-
+                    <img src={images?.send} alt="Irocket" />
                     <h1>Mensagem Enviada</h1>
                   </ContainerTitle>
                   <p>{messageData.name}</p>
@@ -76,7 +76,7 @@ export default function TransitionsModal({
               ) : (
                 <>
                   <ContainerTitle cancel={true}>
-                    <img src={Icancel} alt="Icancel" />
+                    <img src={images?.cancel} alt="Icancel" />
                     <h1>Ocorreu um Erro</h1>
                   </ContainerTitle>
                   <p>Tente enviar sua mensagem mais tarde</p>

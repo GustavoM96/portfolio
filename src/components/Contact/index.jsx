@@ -14,6 +14,8 @@ import { useObserver } from "../../services/intersectionObserver";
 import Footer from "../Footer";
 import { Diviser } from "../../styles/diviser";
 import TransitionsModal from "../Modal";
+import Irocket from "../../image/rocket.svg";
+import Icancel from "../../image/cancel.svg";
 
 export default function Contact() {
   const schema = yup.object().shape({
@@ -51,7 +53,7 @@ export default function Contact() {
     const dataFormed = {
       service_id: "gmailMessage",
       template_id: "template",
-      user_id: "user_Kc790HNAepEsTC7SwSFAx",
+      // user_id: "user_Kc790HNAepEsTC7SwSFAx",
       template_params: {
         from_email: data.email,
         from_name: data.name,
@@ -139,6 +141,7 @@ export default function Contact() {
             messageWasSend={messageWasSend}
             isOpen={isOpen}
             setisOpen={setisOpen}
+            images={{ cancel: Icancel, send: Irocket }}
           />
         </ContainerText>
       </div>

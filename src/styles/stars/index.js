@@ -9,13 +9,11 @@ export const StarFinal = styled.div`
   position: absolute;
   z-index: -1;
   bottom: 0px;
-  right: 0px;
 
-  transform: rotate(-180deg);
+  transform: scaleY(-1);
   background: transparent;
   width: 1px;
   height: 1px;
-  background: transparent;
   /* animation: animStar 150s infinite linear; */
   box-shadow: 779px 1331px #fff, 324px 42px #fff, 303px 586px #fff,
     1312px 276px #fff, 451px 625px, 521px 1931px #fff, 1087px 1871px #fff,
