@@ -7,26 +7,13 @@ export const ContainerContact = styled.section`
   width: 90%;
   padding: 50px 35px;
   display: flex;
+
   @media (max-width: 586px) {
     padding: 50px 0px;
-
     justify-content: center;
     align-items: center;
   }
-  #content {
-    width: 100%;
 
-    display: flex;
-    justify-content: space-between;
-    @media (max-width: 586px) {
-      width: 70%;
-      flex-direction: column-reverse;
-    }
-  }
-
-  h1 {
-    text-align: center;
-  }
   button {
     font-size: 16px;
     font-weight: bolder;
@@ -132,3 +119,22 @@ export const Error = styled.p`
   color: red;
   font-size: 15px;
 `;
+export const ContainerInfo = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 586px) {
+    width: 70%;
+    flex-direction: column-reverse;
+  }
+`;
+
+/* #content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 586px) {
+    width: 70%;
+    flex-direction: column-reverse;
+  }
+} */

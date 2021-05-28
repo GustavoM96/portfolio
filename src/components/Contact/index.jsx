@@ -4,6 +4,7 @@ import {
   ContainerTextInput,
   ContainerText,
   ContainerContact,
+  ContainerInfo,
 } from "./style";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
@@ -11,8 +12,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useObserver } from "../../services/intersectionObserver";
-import Footer from "../Footer";
-import { Diviser } from "../../styles/diviser";
 import TransitionsModal from "../Modal";
 import Irocket from "../../image/rocket.svg";
 import Icancel from "../../image/cancel.svg";
@@ -95,7 +94,7 @@ export default function Contact() {
 
   return (
     <ContainerContact id="Contact" isShown={isShown}>
-      <div id="content">
+      <ContainerInfo>
         <form onSubmit={handleSubmit(handleForm)}>
           <div>
             <div>
@@ -144,7 +143,7 @@ export default function Contact() {
             images={{ cancel: Icancel, send: Irocket }}
           />
         </ContainerText>
-      </div>
+      </ContainerInfo>
     </ContainerContact>
   );
 }
