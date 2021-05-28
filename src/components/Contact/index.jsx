@@ -53,7 +53,7 @@ export default function Contact() {
     const dataFormed = {
       service_id: "gmailMessage",
       template_id: "template",
-      // user_id: "user_Kc790HNAepEsTC7SwSFAx",
+      user_id: "user_Kc790HNAepEsTC7SwSFAx",
       template_params: {
         from_email: data.email,
         from_name: data.name,
