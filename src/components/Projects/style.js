@@ -38,7 +38,7 @@ export const ContainerButton = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #0006;
+  background-color: #0008;
   backdrop-filter: blur(5px);
   width: 100%;
   height: 100%;

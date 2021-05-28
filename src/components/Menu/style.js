@@ -106,7 +106,7 @@ export const Menu = styled.header`
       flex-direction: column;
       justify-content: space-between;
       margin: 0;
-      background-color: #000d;
+      background-color: #000e;
       border-radius: 0 0 0 10px;
       border-left: 1px solid #fff;
       border-bottom: 1px solid #fff;

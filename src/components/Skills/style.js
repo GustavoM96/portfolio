@@ -45,10 +45,14 @@ export const ContainerImages = styled.div`
     text-align: center;
     width: 160px;
     margin: 10px;
+
+    @media (max-width: 430px) {
+      width: 110px;
+    }
   }
-  @media (min-width: 400px) {
-    flex-direction: row;
-    min-height: 400px;
-    flex-wrap: wrap;
-  }
+  flex-direction: row;
+  min-height: 400px;
+  flex-wrap: wrap;
+  /* @media (min-width: 400px) {
+  } */
 `;

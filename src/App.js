@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import ContainerMax from "./components/containerMax";
-import { Star, Star3, Star2 } from "./styles/stars";
+import { Star, Star3, Star2, StarFinal } from "./styles/stars";
 import { BackGround } from "./styles/backGround";
 import ContainerMain from "./components/containerMain";
 import Contact from "./components/Contact";
@@ -22,6 +22,7 @@ function App() {
           <Star />
           <Star2 />
           <Star3 />
+          <StarFinal />
         </>
         <ContainerMain>
           <Presents />

@@ -96,17 +96,16 @@ export const ContainerMove = styled.div`
     justify-content: center;
     align-items: center;
 
+    :hover {
+      cursor: move;
+    }
     img {
       height: 90%;
-
+      pointer-events: none;
       animation: ${({ isShown }) =>
         isShown ? "rotate 10s linear infinite alternate" : "none"};
       transform: rotate(0deg);
       transition: transform 5s linear;
-
-      :hover {
-        cursor: move;
-      }
     }
   }
 `;
