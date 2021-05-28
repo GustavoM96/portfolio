@@ -111,6 +111,7 @@ export const ContainerButton = styled.div`
     width: 30px;
     height: 30px;
     padding: 0;
+    cursor: pointer;
 
     color: #fff;
     background-color: transparent;
