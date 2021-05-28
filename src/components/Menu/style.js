@@ -23,10 +23,10 @@ export const Menu = styled.header`
     align-items: center;
 
     li {
-      font-size: 16px;
+      font-size: 14px;
       margin: 10px 0;
       cursor: pointer;
-      height: 40px;
+      height: 45px;
       &:hover {
         color: var(--secundary-text);
       }
@@ -71,17 +71,20 @@ export const Menu = styled.header`
     justify-content: space-between;
     padding: 0;
     img {
-      margin: 0 0 0 30px;
+      margin: 0 0 0 25px;
+      height: 40px;
     }
     ul {
-      width: 50%;
+      width: 360px;
       min-width: 300px;
       flex-direction: row;
       justify-content: space-between;
-      margin: 0 30px 0 0;
+      margin: 0 25px 0 0;
 
       li {
         font-size: 12px;
+        width: 58px;
+        height: 40px;
       }
     }
   }
