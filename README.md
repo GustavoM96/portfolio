@@ -1,6 +1,6 @@
 # Portfolio
 
-<img src="./src/image/portfolio.png" alt="Podcastr"/>
+<img src="./src/image/portfolio.png" alt="Portfolio"/>
 
 Este projeto trata-se sobre mim, contando um pouco sobre minha introdução a programação, técnicas e habilidades adquiridas, alguns projetos que participei e por fim um espaço para você entrar em contato comigo.
 
